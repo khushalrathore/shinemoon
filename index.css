@@ -55,6 +55,7 @@ p {
   border: 1px solid white;
   padding-inline: 0.5rem;
   font-size: 0.75rem;
+  border-radius: 0;
 
 }
 
