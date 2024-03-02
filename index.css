@@ -50,7 +50,8 @@ a,
 p,
 i,
 b,
-div {
+div,
+li {
   background: transparent;
 }
 
