@@ -188,7 +188,36 @@
     section {
       background: url(https://static1.s123-cdn-static-a.com/uploads/8991715/normal_65e35c9d91b15.gif)no-repeat center center, url(/assets/img/section.gif)no-repeat center center;
       background-size: cover;
+      display: flex;
+      justify-content: start;
+      align-items: end;
+    }
 
+    .quick-link-wrapper {
+      display: flex;
+      background: none;
+      flex-direction: column;
+    }
+
+    .quick-link {
+      text-transform: unset;
+      font-size: 2rem;
+      position: relative;
+    }
+
+    .quick-link::after {
+      content: 'DD/MM/YYYY';
+      position: absolute;
+      font-size: 12px;
+      background: none;
+      font-weight: 900;
+      font-family: monospace;
+      top: -0.25rem;
+      left: 102%;
+    }
+
+    .quick-link:hover {
+      opacity: 0.5;
     }
 
     header,
@@ -206,11 +235,15 @@
 <body>
 
   <header>
-    <div style="background: none;">
-      <p style="font-family: font-bold;font-size: 1.5rem;background: transparent;">
-        <i style="text-shadow: 0px 0 20px rgba(255, 255, 255, 0.587);background: transparent;">ShineMoon</i>
-      </p>
-    </div>
+    <a style="text-transform: none;" href="/">
+      <div style="background: none;display: flex;justify-content: center;align-items: center;gap:0.5rem"><img
+          src="/assets/img/icon-dark.png"
+          style="background: black;filter: saturate(0) invert(1);width:24px;border-radius: 50%;">
+        <p style="font-family: font-bold;font-size: 1.5rem;background: transparent;">
+          <b style="text-shadow: 0px 0 20px rgba(255, 255, 255, 0.2409);background: transparent;">ShineMoon</b>
+        </p>
+      </div>
+    </a>
     <div class="navbar-div hideonmobile">
       <nav>
         <div class="nav-items"><a class="nav-link" href="/" aria-label="Go To Homepage">Home</a></div>
@@ -227,7 +260,26 @@
     <div class="search-icon" style="padding: 0;">SEARCH</div>
   </header>
   <section>
-
+    <div class="quick-link-wrapper">
+      <a href="#" class="quick-link">
+        <h1>Quick Link 1</h1>
+      </a>
+      <a href="#" class="quick-link">
+        <h1>Quick Link 1</h1>
+      </a>
+      <a href="#" class="quick-link">
+        <h1>Quick Link 1</h1>
+      </a>
+      <a href="#" class="quick-link">
+        <h1>Quick Link 1</h1>
+      </a>
+      <a href="#" class="quick-link">
+        <h1>Quick Link 1</h1>
+      </a>
+      <a href="#" class="quick-link">
+        <h1>Quick Link 1</h1>
+      </a>
+    </div>
   </section>
 
   <main>
@@ -278,6 +330,7 @@
     </div>
 
   </footer>
+  <script src="/index.js"></script>
 </body>
 
 </html>
