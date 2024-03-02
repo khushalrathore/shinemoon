@@ -6,15 +6,223 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="icon" type="image/png" href="/assets/img/icon.png">
   <title>ShineMoon</title>
+  <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
   <link rel="stylesheet" href="index.css">
   <style>
+    @media only screen and (max-width: 768px) {
+      .hideonmobile {
+        display: none !important;
+      }
+
+      footer {
+        align-items: start !important;
+      }
+
+      #mailing-submit,
+      #mailing-email {
+        width: 100% !important;
+      }
+
+      footer {
+        grid-template-columns: 1fr 1fr 1fr !important;
+
+      }
+
+      .mailing-form {
+        grid-template-columns: 1fr 1fr !important;
+      }
+    }
+
+    header,
+    footer,
+    section,
+    main {
+      display: flex;
+      justify-content: space-between;
+      padding: 3.5rem;
+      align-items: center;
+      position: relative;
+    }
+
+    .logo {
+      background: url(/assets/img/icon.png)no-repeat center center;
+      background-size: contain;
+      width: 48px;
+      height: 48px;
+    }
+
+    .menu-icon,
+    .search-icon {
+      position: relative;
+      padding-inline: 1.5rem;
+      cursor: pointer;
+    }
+
+    .menu-icon::before {
+      position: absolute;
+      content: '';
+      background: none;
+      border-top: 0.09125rem solid white;
+      border-bottom: 0.09125rem solid white;
+      width: 1.8rem;
+      left: -1rem;
+      top: 0.125rem;
+      height: 0.7rem;
+    }
+
+    .menu-icon:hover::before {
+      height: 0.75rem;
+      top: 0.0925rem;
+    }
+
+    .search-icon:hover {
+      opacity: 0.7;
+    }
+
+    /* .navbar-div {
+    } */
+
+    nav {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 1.2rem;
+    }
+
+    .nav-items {
+      text-align: center;
+      cursor: pointer;
+      margin-inline: 1.25rem;
+      position: relative;
+      font-size: 1.125rem;
+    }
+
+    .nav-items::after {
+      cursor: pointer;
+      position: absolute;
+      content: '';
+      background: white;
+      width: 100%;
+      border: 0.8px solid white;
+      border-radius: 10dvw;
+      bottom: 0;
+      left: 0;
+      display: none;
+    }
+
+    .nav-items:hover::after,
+    .nav-items:active::after {
+      display: block;
+    }
+
+
+
+    footer {
+      display: grid;
+      grid-template-columns: 1fr 1fr 2fr;
+      align-items: stretch;
+      justify-content: space-between;
+      width: 100%;
+      position: absolute;
+      bottom: 0;
+      left: 0;
+    }
+
+
+    .nav-link {
+      font-size: 1rem;
+    }
+
+    .nav-link,
+    .footer-link {
+      text-decoration: none;
+    }
+
+    .footer-block-1 {
+      display: flex;
+      flex: 1 0 33%;
+      flex-direction: column;
+      gap: 1.5rem;
+      justify-content: stretch;
+    }
+
+    main {
+      background: white;
+      color: black;
+      height: 100dvh;
+    }
   </style>
 </head>
 
 <body>
-  <p style="font-size: 5rem;">Hey</p>
-  <p style="font-size: 5rem;">Hey</p>
-  <p style="font-family: font-bold; font-size: 5rem;">Hey</p>
+
+  <header>
+    <div>
+      <p style="font-family: font-bold;font-size: 1.5rem;">
+        <i style="text-shadow: 0px 0 20px rgba(255, 255, 255, 0.587);">ShineMoon</i>
+      </p>
+    </div>
+    <div class="navbar-div hideonmobile">
+      <nav>
+        <div class="nav-items"><a class="nav-link" href="/" aria-label="Go To Homepage" style="border-bottom: 0.8px solid white;
+">Home</a></div>
+        <div class="nav-items"><a class="nav-link" href="/team.html" aria-label="Our Team Members">Team</a></div>
+        <div class="nav-items"><a class="nav-link" href="/courses.html"
+            aria-label="Check out these courses and other source materials">Courses</a></div>
+        <div class="nav-items"><a class="nav-link" href="/portfolio.html"
+            aria-label="Check out my portfolio">Portfolio</a>
+        </div>
+        <div class="nav-items"><a class="nav-link" href="/contact.html" aria-label="Contact Us">Contact</a></div>
+      </nav>
+    </div>
+
+    <div class="search-icon"><span class="material-symbols-outlined">
+        search
+      </span></div>
+  </header>
+  <section>section</section>
+  <main>
+    hey
+  </main>
+  <footer>
+    <div class="footer-block-1">
+      <span class="footer-block-1" style="gap:0.5rem">
+        <a class="footer-link" href="/join-us.html" aria-label="Apply to become a Team Member">Join Us</a>
+        <a class="footer-link" href="/courses.html" aria-label="Check out these new courses">Live Classes</a>
+      </span>
+      <span class="footer-block-1" style="gap:0.5rem">
+        <a class="footer-link" href="/join-us.html" aria-label="Read our Terms of use">TERMS OF USE</a>
+        <a class="footer-link" href="/courses.html" aria-label="Read our Privacy Policy">PRIVACY POLICY</a>
+      </span>
+    </div>
+    <div class="footer-block-1" style="padding-inline: 1rem;">
+      <span style="border-top: 1px solid white;font-size: 0.725rem;padding-top: 0.25rem;">OUR SOCIALS</span>
+      <span class="footer-block-1" style="gap:0.5rem">
+        <a class="footer-link" href="/join-us.html" aria-label="Check out our Youtube Channel">YOUTUBE</a>
+        <a class="footer-link" href="/courses.html" aria-label="Check out our Instagram Profile">INSTAGRAM</a>
+        <a class="footer-link" href="/join-us.html" aria-label="Check out our Twitter Profile">TWITTER</a>
+        <a class="footer-link" href="/courses.html" aria-label="Check out our Facebook Profile">FACEBOOK</a>
+      </span>
+    </div>
+    <div class="footer-block-1">
+      <span style="border-top: 1px solid white;font-size: 0.725rem;padding-top: 0.25rem;">UPDATES</span>
+      <span class="footer-block-1" style="gap:0.5rem">
+        <a class="footer-link" href="/courses.html" aria-label="Check out these new courses"
+          style="text-transform: unset;">Get notified about upcoming
+          courses and live classes.</a>
+
+        <form class="mailing-form">
+          <input type="email" placeholder="EXAMPLE@MAIL.COM" id="mailing-email">
+          <input type="submit" id="mailing-submit" value="SIGN UP">
+        </form>
+
+      </span>
+
+    </div>
+    <div></div>
+    <div></div>
+  </footer>
 </body>
 
 </html>

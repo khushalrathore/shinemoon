@@ -16,9 +16,53 @@
 *,
 *::after,
 *::before {
+  background: black;
+  color: white;
   box-sizing: border-box;
   margin: 0;
   padding: 0;
   -webkit-font-smoothing: antialiased;
   font-family: font, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  position: relative;
+}
+
+a {
+  text-transform: uppercase;
+  cursor: pointer;
+}
+
+.mailing-form {
+  display: grid;
+  grid-template-columns: 3fr 1fr;
+  justify-content: start;
+  align-items: center;
+}
+
+#mailing-email,
+#mailing-submit {
+  padding-block: 1.25rem;
+  border: 1px solid white;
+  padding-inline: 0.5rem;
+  font-size: 0.75rem;
+
+}
+
+/* #mailing-email {} */
+
+#mailing-email:focus,
+#mailing-submit:focus {
+  outline: none;
+}
+
+
+#mailing-submit {
+  background: white;
+  color: black;
 }
