@@ -42,6 +42,8 @@
       }
     }
 
+
+
     header,
     footer,
     section,
@@ -51,6 +53,17 @@
       padding: 3.5rem;
       align-items: center;
     }
+
+    header {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      z-index: 100;
+      background: linear-gradient(rgba(0, 0, 0, 0.518) 30%, rgba(255, 255, 255, 0));
+      padding-block: 1.5rem;
+    }
+
+
 
     .logo {
       background: url(/assets/img/icon.png)no-repeat center center;
@@ -118,9 +131,14 @@
       display: none;
     }
 
+    .nav-items:first-child:after {
+      display: block;
+    }
+
     .nav-items:hover::after,
     .nav-items:active::after {
       display: block;
+
     }
 
 
@@ -154,10 +172,33 @@
       justify-content: stretch;
     }
 
-    main {
+    section {
+      position: relative;
+      height: 100dvh;
       background: white;
+    }
+
+    main {
+      background: rgb(219, 163, 163);
       color: black;
       height: 100dvh;
+
+    }
+
+    section {
+      background: url(https://static1.s123-cdn-static-a.com/uploads/8991715/normal_65e35c9d91b15.gif)no-repeat center center, url(/assets/img/section.gif)no-repeat center center;
+      background-size: cover;
+
+    }
+
+    header,
+    nav,
+    .navbar-div,
+    .nav-items,
+    .nav-link,
+    .search-icon {
+      background: none;
+      text-shadow: 0px 0 20px rgba(255, 255, 255, 0.587);
     }
   </style>
 </head>
@@ -165,15 +206,14 @@
 <body>
 
   <header>
-    <div>
-      <p style="font-family: font-bold;font-size: 1.5rem;">
-        <i style="text-shadow: 0px 0 20px rgba(255, 255, 255, 0.587);">ShineMoon</i>
+    <div style="background: none;">
+      <p style="font-family: font-bold;font-size: 1.5rem;background: transparent;">
+        <i style="text-shadow: 0px 0 20px rgba(255, 255, 255, 0.587);background: transparent;">ShineMoon</i>
       </p>
     </div>
     <div class="navbar-div hideonmobile">
       <nav>
-        <div class="nav-items"><a class="nav-link" href="/" aria-label="Go To Homepage" style="border-bottom: 0.8px solid white;
-">Home</a></div>
+        <div class="nav-items"><a class="nav-link" href="/" aria-label="Go To Homepage">Home</a></div>
         <div class="nav-items"><a class="nav-link" href="/team.html" aria-label="Our Team Members">Team</a></div>
         <div class="nav-items"><a class="nav-link" href="/courses.html"
             aria-label="Check out these courses and other source materials">Courses</a></div>
@@ -186,7 +226,10 @@
 
     <div class="search-icon" style="padding: 0;">SEARCH</div>
   </header>
-  <section>section</section>
+  <section>
+
+  </section>
+
   <main>
     hey
   </main>
@@ -226,7 +269,7 @@
           about upcoming
           courses and live classes.</p>
 
-        <form class="mailing-form">
+        <form class="mailing-form" id="hey">
           <input type="email" placeholder="EXAMPLE@MAIL.COM" id="mailing-email">
           <input type="submit" id="mailing-submit" value="SIGN UP">
         </form>
