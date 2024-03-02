@@ -38,6 +38,10 @@ a {
   cursor: pointer;
 }
 
+p {
+  word-wrap: break-word;
+}
+
 .mailing-form {
   display: grid;
   grid-template-columns: 3fr 1fr;

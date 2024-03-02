@@ -15,6 +15,13 @@
         display: none !important;
       }
 
+      header,
+      footer,
+      section,
+      main {
+        padding: 1.5rem !important;
+      }
+
       footer {
         align-items: start !important;
       }
@@ -25,12 +32,12 @@
       }
 
       footer {
-        grid-template-columns: 1fr 1fr 1fr !important;
-
+        grid-template-columns: repeat(1, 1fr) !important;
+        row-gap: 1.5rem;
       }
 
-      .mailing-form {
-        grid-template-columns: 1fr 1fr !important;
+      .mobile-footer-bottom {
+        margin-top: 1rem !important;
       }
     }
 
@@ -42,7 +49,6 @@
       justify-content: space-between;
       padding: 3.5rem;
       align-items: center;
-      position: relative;
     }
 
     .logo {
@@ -120,7 +126,7 @@
 
     footer {
       display: grid;
-      grid-template-columns: 1fr 1fr 2fr;
+      grid-template-columns: 1fr 1fr;
       align-items: stretch;
       justify-content: space-between;
       width: 100%;
@@ -177,37 +183,38 @@
       </nav>
     </div>
 
-    <div class="search-icon"><span class="material-symbols-outlined">
-        search
-      </span></div>
+    <div class="search-icon" style="padding: 0;">SEARCH</div>
   </header>
   <section>section</section>
   <main>
     hey
   </main>
   <footer>
-    <div class="footer-block-1">
-      <span class="footer-block-1" style="gap:0.5rem">
-        <a class="footer-link" href="/join-us.html" aria-label="Apply to become a Team Member">Join Us</a>
-        <a class="footer-link" href="/courses.html" aria-label="Check out these new courses">Live Classes</a>
-      </span>
-      <span class="footer-block-1" style="gap:0.5rem">
-        <a class="footer-link" href="/join-us.html" aria-label="Read our Terms of use">TERMS OF USE</a>
-        <a class="footer-link" href="/courses.html" aria-label="Read our Privacy Policy">PRIVACY POLICY</a>
-      </span>
+    <div style="display: flex">
+      <div class="footer-block-1">
+        <span class="footer-block-1" style="gap:0.5rem">
+          <a class="footer-link" href="/join-us.html" aria-label="Apply to become a Team Member">Join Us</a>
+          <a class="footer-link" href="/courses.html" aria-label="Check out these new courses">Live Classes</a>
+        </span>
+        <span class="footer-block-1" style="gap:0.5rem;justify-content: end;">
+          <a class="footer-link" href="/join-us.html" aria-label="Read our Terms of use">TERMS OF USE</a>
+          <a class="footer-link" href="/courses.html" aria-label="Read our Privacy Policy">PRIVACY POLICY</a>
+        </span>
+      </div>
+      <div class="footer-block-1" style="padding-inline: 1rem;">
+        <span style="border-top: 1px solid white;font-size: 0.725rem;padding-top: 0.25rem;">OUR SOCIALS</span>
+        <span class="footer-block-1" style="gap:0.5rem">
+          <a class="footer-link" href="/join-us.html" aria-label="Check out our Youtube Channel">YOUTUBE</a>
+          <a class="footer-link" href="/courses.html" aria-label="Check out our Instagram Profile">INSTAGRAM</a>
+          <a class="footer-link" href="/join-us.html" aria-label="Check out our Twitter Profile">TWITTER</a>
+          <a class="footer-link" href="/courses.html" aria-label="Check out our Facebook Profile">FACEBOOK</a>
+        </span>
+      </div>
     </div>
-    <div class="footer-block-1" style="padding-inline: 1rem;">
-      <span style="border-top: 1px solid white;font-size: 0.725rem;padding-top: 0.25rem;">OUR SOCIALS</span>
-      <span class="footer-block-1" style="gap:0.5rem">
-        <a class="footer-link" href="/join-us.html" aria-label="Check out our Youtube Channel">YOUTUBE</a>
-        <a class="footer-link" href="/courses.html" aria-label="Check out our Instagram Profile">INSTAGRAM</a>
-        <a class="footer-link" href="/join-us.html" aria-label="Check out our Twitter Profile">TWITTER</a>
-        <a class="footer-link" href="/courses.html" aria-label="Check out our Facebook Profile">FACEBOOK</a>
-      </span>
-    </div>
-    <div class="footer-block-1">
+
+    <div class="footer-block-1 mobile-footer-bottom" style="gap:1rem;">
       <span style="border-top: 1px solid white;font-size: 0.725rem;padding-top: 0.25rem;">UPDATES</span>
-      <span class="footer-block-1" style="gap:0.5rem">
+      <span class="footer-block-1" style="gap:0.5rem;justify-content: end;">
         <a class="footer-link" href="/courses.html" aria-label="Check out these new courses"
           style="text-transform: unset;">Get notified about upcoming
           courses and live classes.</a>
@@ -218,10 +225,8 @@
         </form>
 
       </span>
-
     </div>
-    <div></div>
-    <div></div>
+
   </footer>
 </body>
 
