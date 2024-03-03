@@ -381,11 +381,46 @@ main {
 section,
 .section-div {
   height: 100dvh;
+  background: transparent;
+  background-size: cover;
+  display: flex;
+  justify-content: start;
+  align-items: end;
+  position: relative;
+}
+
+.quick-link-wrapper {
+  background: transparent;
+
+  position: relative;
+  z-index: 1;
+
+}
+
+section::after {
+  position: absolute;
+  inset: 0;
+  content: '';
+  height: 100dvh;
   background: url(https://static1.s123-cdn-static-a.com/uploads/8991715/normal_65e35c9d91b15.gif)no-repeat center center, black;
   background-size: cover;
   display: flex;
   justify-content: start;
   align-items: end;
+  z-index: 0;
+  animation: blurIn 1s linear forwards;
+}
+
+
+
+@keyframes blurIn {
+  from {
+    filter: blur(50px)
+  }
+
+  to {
+    filter: none
+  }
 }
 
 .quick-link-wrapper {
