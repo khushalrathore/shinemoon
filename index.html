@@ -14,7 +14,7 @@
 <body>
 
   <header>
-    <a style="text-transform: none;" href="/">
+    <a style="text-transform: none;" href="/" aria-label="Go to Homepage">
       <div style="background: none;display: flex;justify-content: center;align-items: center;gap:0.5rem"><img
           src="/assets/img/icon-dark.png" alt="shinemoon icon"
           style="background: black;filter: saturate(0) invert(1);height:24px;width:24px;border-radius: 50%;">
@@ -40,22 +40,22 @@
   </header>
   <section>
     <div class="quick-link-wrapper">
-      <a href="#" class="quick-link">
+      <a href="#" class="quick-link" aria-label="Check this thing out">
         <h1>Quick Link 1</h1>
       </a>
-      <a href="#" class="quick-link">
+      <a href="#" class="quick-link" aria-label="Check this thing out">
         <h1>Quick Link 2</h1>
       </a>
-      <a href="#" class="quick-link">
+      <a href="#" class="quick-link" aria-label="Check this thing out">
         <h1>Quick Link 3</h1>
       </a>
-      <a href="#" class="quick-link">
+      <a href="#" class="quick-link" aria-label="Check this thing out">
         <h1>Quick Link 4</h1>
       </a>
-      <a href="#" class="quick-link">
+      <a href="#" class="quick-link" aria-label="Check this thing out">
         <h1>Quick Link 5</h1>
       </a>
-      <a href="#" class="quick-link">
+      <a href="#" class="quick-link" aria-label="Check this thing out">
         <h1>Quick Link 6</h1>
       </a>
     </div>
@@ -67,7 +67,8 @@
 
       <div style="color: black;display: flex;justify-content: space-between;flex-direction: column;">
         <div>
-          <a style="color: rgba(85,85,85,1);font-size: 0.8rem;font-family: font-light;" href="#">#Course</a>
+          <a style="color: rgba(85,85,85,1);font-size: 0.8rem;font-family: font-light;" href="#"
+            aria-label="Read more about these trending courses">#Course</a>
           <p style="color:black;max-width: 25ch;margin-block:1rem;font-size:2rem" href="#">Lorem ipsum dolor sit
             amet consectetur adipisicing elit. </p>
           <p style="color:rgba(34,34,34,0.8);max-width: 40ch;margin-block:1rem;font-size:1.3rem" href="#"><i
@@ -75,7 +76,7 @@
             adipisicing elit. Enim consequuntur sequi similique, debitis, amet, quasi consectetur magni libero atque
             nisi perspiciatis mollitia. Impedit culpa ut, suscipit perferendis ex obcaecati et.</p>
         </div>
-        <a class="check-now" style="color: black;font-size:1.3rem" href="#">
+        <a aria-label="Open Link" class="check-now" style="color: black;font-size:1.3rem" href="#">
           <div
             style="background: none;background: url(/assets/img/goto.png)no-repeat center center;background-size: contain;width: 24px;height:24px;">
           </div>CHECK NOW
@@ -89,7 +90,8 @@
 
       <div style="color: black;display: flex;justify-content: space-between;flex-direction: column;">
         <div>
-          <a style="color: rgba(85,85,85,1);font-size: 0.8rem;font-family: font-light;" href="#">#LiveClasses</a>
+          <a style="color: rgba(85,85,85,1);font-size: 0.8rem;font-family: font-light;" href="#"
+            aria-label="Know more about upcoming live classes">#LiveClasses</a>
           <p style="color:black;max-width: 25ch;margin-block:1rem;font-size:2rem" href="#">Lorem ipsum dolor sit
             amet consectetur adipisicing elit. </p>
           <p style="color:rgba(34,34,34,0.8);max-width: 40ch;margin-block:1rem;font-size:1.3rem" href="#"><i
@@ -97,7 +99,8 @@
             adipisicing elit. Enim consequuntur sequi similique, debitis, amet, quasi consectetur magni libero atque
             nisi perspiciatis mollitia. Impedit culpa ut, suscipit perferendis ex obcaecati et.</p>
         </div>
-        <a class="check-now" style="color: black;font-size:1.3rem;background: none;" href="#">
+        <a aria-label="Go check this" class="check-now" style="color: black;font-size:1.3rem;background: none;"
+          href="#">
           <div
             style="background: none;background: url(/assets/img/goto.png)no-repeat center center;background-size: contain;width: 24px;height:24px;">
           </div>CHECK
@@ -113,14 +116,15 @@
 
       <div style="color: black;display: flex;justify-content: space-between;flex-direction: column;">
         <div>
-          <a style="color: rgba(85,85,85,1);font-size: 0.8rem;font-family: font-light;" href="#">#Hashtag</a>
+          <a style="color: rgba(85,85,85,1);font-size: 0.8rem;font-family: font-light;" href="#"
+            aria-label="Read more about this thing">#Hashtag</a>
           <p style="color:black;max-width: 25ch;margin-block:1rem;font-size:2rem" href="#">Heading Lorem Ipsum</p>
           <p style="color:rgba(34,34,34,0.8);max-width: 40ch;margin-block:1rem;font-size:1.3rem" href="#"><i
               style="color: rgba(85,85,85,1);">Description</i>&nbsp;: &nbsp Lorem ipsum dolor sit amet consectetur
             adipisicing elit. Enim consequuntur sequi similique, debitis, amet, quasi consectetur magni libero atque
             nisi perspiciatis mollitia. Impedit culpa ut, suscipit perferendis ex obcaecati et.</p>
         </div>
-        <a class="check-now" style="color: black;font-size:1.3rem" href="#">
+        <a aria-label="Go check this" class="check-now" style="color: black;font-size:1.3rem" href="#">
           <div
             style="background: none;background: url(/assets/img/goto.png)no-repeat center center;background-size: contain;width: 24px;height:24px;">
           </div>CHECK NOW
@@ -128,37 +132,41 @@
       </div>
 
     </div>
-    <a href="#" aria-label="Trending Today" style="overflow: hidden;">
+    <a aria-label="See whats trendig today" href="#" aria-label="Trending Today" style="overflow: hidden;">
       <div class="section-div"
         style="height: 40dvh;width: 100dvw;background: url(https://images.unsplash.com/photo-1610847455028-9e55e62bac33?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D)no-repeat center center;">
         <div class="quick-link-wrapper" style="margin:1rem">
           <p style="opacity: 0.6;">WATCH NOW</p>
 
-          <a href="#" class="quick-link-without-after">
+          <a aria-label="banner description" href="#" class="quick-link-without-after">
             <h1>Quick Link 1</h1>
           </a>
 
         </div>
       </div>
     </a>
-    <div class="home-content-wrapper" style="flex-direction: row-reverse;">
-      <img class="home-content-banner" style="filter: none;"
-        src="https://images.unsplash.com/photo-1579783902614-a3fb3927b6a5?q=80&w=3145&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-        alt="Course Thumbnail" loading="lazy">
+
+    <div class="home-content-wrapper" style="flex-direction: row-reverse;justify-content: space-between;width: 100%;">
+      <img class="home-content-banner" src="https://images.unsplash.com/photo-1579783902614-a3fb3927b6a5"
+        style="width:40%;filter: none;" alt="Live Classes Thumbnail">
 
       <div style="color: black;display: flex;justify-content: space-between;flex-direction: column;">
         <div>
-          <a style="color: rgba(85,85,85,1);font-size: 0.8rem;font-family: font-light;" href="#">#Blog</a>
-          <p style="color:black;max-width: 25ch;margin-block:1rem;font-size:2rem" href="#">Heading Lorem Ipsum</p>
+          <a style="color: rgba(85,85,85,1);font-size: 0.8rem;font-family: font-light;" href="#"
+            aria-label="Know more about upcoming live classes">#LiveClasses</a>
+          <p style="color:black;max-width: 25ch;margin-block:1rem;font-size:2rem" href="#">Lorem ipsum dolor sit
+            amet consectetur adipisicing elit. </p>
           <p style="color:rgba(34,34,34,0.8);max-width: 40ch;margin-block:1rem;font-size:1.3rem" href="#"><i
               style="color: rgba(85,85,85,1);">Description</i>&nbsp;: &nbsp Lorem ipsum dolor sit amet consectetur
             adipisicing elit. Enim consequuntur sequi similique, debitis, amet, quasi consectetur magni libero atque
             nisi perspiciatis mollitia. Impedit culpa ut, suscipit perferendis ex obcaecati et.</p>
         </div>
-        <a class="check-now" style="color: black;font-size:1.3rem" href="#">
+        <a aria-label="Go check this" class="check-now" style="color: black;font-size:1.3rem;background: none;"
+          href="#">
           <div
             style="background: none;background: url(/assets/img/goto.png)no-repeat center center;background-size: contain;width: 24px;height:24px;">
-          </div>CHECK NOW
+          </div>CHECK
+          NOW
         </a>
       </div>
 

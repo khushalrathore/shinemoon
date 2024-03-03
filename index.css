@@ -113,6 +113,12 @@ p {
     padding: 2rem !important;
   }
 
+  .home-content-wrapper {
+    flex-wrap: wrap;
+    justify-content: start !important;
+    align-items: start !important;
+  }
+
   .quick-link-wrapper,
   .quick-link {
     font-size: 1.5rem !important;
@@ -294,7 +300,6 @@ main {
 
 .home-content-wrapper {
   display: flex;
-  flex-wrap: wrap;
   flex-direction: row;
   gap: 3rem;
   max-width: 100%;
