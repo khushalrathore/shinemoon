@@ -449,7 +449,7 @@ main {
 
 section,
 .section-div {
-  height: 100vh;
+  height: 100dvh;
   background: transparent;
   background-size: cover;
   display: flex;
