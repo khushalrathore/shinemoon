@@ -126,7 +126,15 @@ p {
   color: black;
 }
 
+@media only screen and (min-width: 768px) {
+  .hideonlarge {
+    display: none !important;
+  }
+}
+
 @media only screen and (max-width: 768px) {
+
+
   .hideonmobile {
     display: none !important;
   }
@@ -186,6 +194,14 @@ p {
   .mobile-footer-bottom {
     margin-top: 1rem !important;
   }
+
+  .quick-link-wrapper {
+    padding-top: 3rem !important;
+  }
+
+  section {
+    padding-top: 3rem !important;
+  }
 }
 
 
@@ -219,29 +235,50 @@ header {
   height: 48px;
 }
 
-.menu-icon,
+
+#menuIcon,
 .search-icon {
   position: relative;
   padding-inline: 1.5rem;
   cursor: pointer;
+  z-index: 3;
 }
 
-.menu-icon::before {
+
+#menuIcon::before {
   position: absolute;
-  content: '';
+  content: '···';
+  padding-top: 5px;
   background: none;
-  border-top: 0.09125rem solid white;
-  border-bottom: 0.09125rem solid white;
   width: 1.8rem;
-  left: -1rem;
-  top: 0.125rem;
+  right: 1rem;
+  font-size: 2rem;
+  font-family: font-light;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  top: -0.51rem;
   height: 0.7rem;
 }
 
-.menu-icon:hover::before {
-  height: 0.75rem;
-  top: 0.0925rem;
+#menuIcon.cross::before {
+  content: '\00d7';
+  padding-top: 0px;
+  position: absolute;
+  background: none;
+  width: 1.8rem;
+  right: 1rem;
+  font-size: 2rem;
+  font-family: font-light;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  top: -0.51rem;
+  height: 0.7rem;
 }
+
+
+
 
 .search-icon:hover {
   opacity: 0.7;
@@ -250,12 +287,44 @@ header {
 /* .navbar-div {
     } */
 
-nav {
+nav,
+#mobile-nav {
   display: flex;
   justify-content: center;
   align-items: center;
   gap: 1.2rem;
 }
+
+#mobile-nav {
+  flex-direction: column;
+  align-items: start;
+  justify-content: start;
+  position: fixed;
+  top: 0;
+  display: none;
+  left: 0rem;
+  height: 100dvh;
+  width: 100dvw;
+  background: black;
+  padding-block: 3rem;
+}
+
+.quick-link-wrapper {
+  padding-top: 3rem;
+}
+
+#mobile-nav>.nav-items>.nav-link {
+  font-size: 2rem;
+  text-shadow: none;
+  text-transform: none;
+  font-family: font-light;
+}
+
+#mobile-nav>.nav-items::after {
+  content: none;
+
+}
+
 
 .nav-items {
   text-align: center;

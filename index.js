@@ -21,3 +21,21 @@ document.addEventListener('DOMContentLoaded', function() {
 // document.getElementById(`header`).style.marginBlockStart = '5rem';
 
 // })
+let menuOpen = false;
+const menuIcon = document.getElementById(`menuIcon`);
+
+document.getElementById(`menuIcon`).addEventListener(`click`, function toggleMenu() {
+    if (!menuOpen) {
+        document.getElementById(`mobile-nav`).style.display = 'flex';
+        document.getElementById(`searchIcon`).style.display = 'none';
+        menuIcon.classList.add('cross'); 
+        menuOpen = true;
+    } else {
+        document.getElementById(`mobile-nav`).style.display = 'none';
+        document.getElementById(`searchIcon`).style.display = 'block';
+        menuIcon.classList.remove('cross');
+        menuOpen = false;
+    }
+});
+
+
