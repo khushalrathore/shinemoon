@@ -67,15 +67,28 @@ p {
   margin: 0;
 }
 
-.mailing-form {
+.mailing-form,
+.search-form {
   display: grid;
   grid-template-columns: 3fr 1fr;
   justify-content: start;
   align-items: center;
 }
 
+.search-form {
+  grid-template-columns: 1fr;
+}
+
+.search-form {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+}
+
 #mailing-email,
-#mailing-submit {
+#mailing-submit,
+#search-submit {
   padding-block: 1.25rem;
   border: 1px solid white;
   padding-inline: 0.5rem;
@@ -83,6 +96,22 @@ p {
   border-radius: 0;
 
 }
+
+#search-submit {
+  padding-block: 2.275rem;
+  border-left: 0px solid white;
+  font-size: 0.75rem;
+  font-family: font-light;
+}
+
+#mailing-email {
+  border-right: 0px solid white;
+  font-size: 2.75rem;
+  font-family: font-light;
+  padding: 1.5rem 3rem;
+
+}
+
 
 /* #mailing-email {} */
 

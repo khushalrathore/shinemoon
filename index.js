@@ -15,3 +15,9 @@ document.addEventListener('DOMContentLoaded', function() {
     });
   } 
 });
+// document.getElementById(`searchIcon`).addEventListener(`click`, function toggleSearchBox() {
+// document.getElementById(`searchBox`).style.display = 'block';
+// document.getElementById(`bodyMinusSearch`).style.marginBlockStart = '5rem';
+// document.getElementById(`header`).style.marginBlockStart = '5rem';
+
+// })
