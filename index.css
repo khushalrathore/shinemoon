@@ -1,3 +1,5 @@
+@import url(/assets/theme.css);
+
 @font-face {
   font-family: font;
   src: url(/assets/fonts/font.ttf);
@@ -16,8 +18,8 @@
 *,
 *::after,
 *::before {
-  background: black;
-  color: white;
+  background: var(--bg-primary);
+  color: var(--fg-primary);
   box-sizing: border-box;
   margin: 0;
   padding: 0;
@@ -38,6 +40,7 @@ a {
   text-decoration: none;
   text-transform: uppercase;
   cursor: pointer;
+
 }
 
 h1,
@@ -53,10 +56,12 @@ b,
 div,
 li {
   background: transparent;
+  color: var(--fg-primary)
 }
 
 p {
   word-wrap: break-word;
+  color: var(--fg-primary)
 }
 
 .content-fixed {
@@ -90,22 +95,29 @@ p {
 #mailing-submit,
 #search-submit {
   padding-block: 1.25rem;
-  border: 1px solid white;
+  border: 1px solid var(--fg-primary);
   padding-inline: 0.5rem;
   font-size: 0.75rem;
   border-radius: 0;
+  color: var(--fg-primary);
+  font-family: monospace;
+  font-weight: 900;
+}
+
+#mailing-email::placeholder {
+  color: var(--fg-primary);
 
 }
 
 /* #search-submit {
   padding-block: 2.275rem;
-  border-left: 0px solid white;
+  border-left: 0px solid var(--fg-primary);
   font-size: 0.75rem;
   font-family: font-light;
 }
 
 #mailing-email {
-  border-right: 0px solid white;
+  border-right: 0px solid var(--fg-primary);
   font-size: 2.75rem;
   font-family: font-light;
   padding: 1.5rem 3rem;
@@ -122,8 +134,10 @@ p {
 
 
 #mailing-submit {
-  background: white;
-  color: black;
+  background: var(--fg-primary);
+  color: var(--bg-primary);
+  cursor: pointer;
+  border: 2px solid var(--bg-primary);
 }
 
 @media only screen and (min-width: 768px) {
@@ -222,7 +236,7 @@ header {
   top: 0;
   width: 100%;
   z-index: 100;
-  background: linear-gradient(rgba(0, 0, 0, 0.518) 30%, rgba(255, 255, 255, 0));
+  background: var(--bg-primary);
   padding-block: 1.5rem;
 }
 
@@ -305,8 +319,16 @@ nav,
   left: 0rem;
   height: 100dvh;
   width: 100dvw;
-  background: black;
+  background: var(--bg-primary);
   padding-block: 3rem;
+}
+
+section {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
 }
 
 .quick-link-wrapper {
@@ -338,9 +360,9 @@ nav,
   cursor: pointer;
   position: absolute;
   content: '';
-  background: white;
+  background: var(--bg-primary);
   width: 100%;
-  border: 0.8px solid white;
+  border: 0.8px solid var(--bg-primary);
   border-radius: 10dvw;
   bottom: 0;
   left: 0;
@@ -360,6 +382,8 @@ nav,
 
 
 footer {
+  background: var(--fg-primary);
+  color: var(--bg-primary);
   display: grid;
   grid-template-columns: 1fr 1fr;
   align-items: stretch;
@@ -369,16 +393,22 @@ footer {
 }
 
 
+
+
 .nav-link {
   font-size: 1rem;
 }
 
 .nav-link,
 .footer-link {
+  background: var(--fg-primary);
+  color: var(--bg-primary);
   text-decoration: none;
 }
 
 .footer-block-1 {
+  background: var(--fg-primary);
+  color: var(--bg-primary);
   display: flex;
   flex: 1 0 33%;
   flex-direction: column;
@@ -389,7 +419,7 @@ footer {
 main {
   position: relative;
   background: rgb(255, 255, 255);
-  color: black;
+  color: var(--bg-primary);
   padding: 3.5rem 4.25rem;
   display: flex;
   flex-direction: column;
@@ -405,7 +435,7 @@ main {
 }
 
 .home-content-banner {
-  color: black;
+  color: var(--bg-primary);
   width: 50%;
   filter: saturate(0);
   height: 400px;
@@ -434,7 +464,8 @@ main {
 }
 
 .home-content-wrapper:hover .check-now {
-  color: rgb(255, 0, 0) !important;
+  color: var(--bg-primary) !important;
+  background: var(--fg-primary) !important;
 }
 
 .check-now {
@@ -471,26 +502,25 @@ section::after {
   inset: 0;
   content: '';
   height: 100dvh;
-  background: url(https://static1.s123-cdn-static-a.com/uploads/8991715/normal_65e35c9d91b15.gif)no-repeat center center, black;
+  background: url(/assets/hero-bg1.gif)no-repeat center center, var(--bg-primary);
   background-size: cover;
   display: flex;
   justify-content: start;
   align-items: end;
   z-index: 0;
-  animation: blurIn 1s linear forwards;
+  animation: blurOut 1s linear forwards;
 }
 
-
-
-@keyframes blurIn {
+@keyframes blurOut {
   from {
-    filter: blur(50px)
+    filter: blur(500px)
   }
 
   to {
     filter: none
   }
 }
+
 
 .quick-link-wrapper {
   display: flex;
@@ -507,6 +537,7 @@ quick-link-without-after {
 
 .quick-link-without-after::after {
   content: none;
+  color: white;
 }
 
 .quick-link::after {
@@ -518,6 +549,7 @@ quick-link-without-after {
   font-family: monospace;
   top: -0.25rem;
   left: 102%;
+  color: white;
 }
 
 .quick-link:hover,
@@ -532,5 +564,4 @@ nav,
 .nav-link,
 .search-icon {
   background: none;
-  text-shadow: 0px 0 20px rgba(255, 255, 255, 0.587);
 }

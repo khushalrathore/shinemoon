@@ -8,7 +8,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
     window.addEventListener('scroll', function() {
       if (window.scrollY > sectionOffset + distanceFromSection) {
-        header.style.backgroundColor = 'black';
+        header.style.backgroundColor = 'var(--fg-primary)';
       } else {
         header.style.backgroundColor = 'transparent';
       }
