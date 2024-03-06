@@ -1,6 +1,7 @@
 document.addEventListener('DOMContentLoaded', function() {
   var header = document.querySelector('header');
   var section = document.querySelector('section');
+  var nav = document.querySelector('nav');
   
   if (section) {
     var sectionOffset = section.offsetTop;
@@ -9,8 +10,11 @@ document.addEventListener('DOMContentLoaded', function() {
     window.addEventListener('scroll', function() {
       if (window.scrollY > sectionOffset + distanceFromSection) {
         header.style.backgroundColor = 'var(--fg-primary)';
+        nav.style.filter=`none`;
       } else {
         header.style.backgroundColor = 'transparent';
+                nav.style.filter=`invert(1)`;
+
       }
     });
   } 
