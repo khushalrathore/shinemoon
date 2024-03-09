@@ -1,7 +1,7 @@
 @media (prefers-color-scheme: dark) {
   :root {
-    --bg-primary: purple;
-    --fg-primary: orchid;
+    --bg-primary: white;
+    --fg-primary: black;
   }
 }
 
