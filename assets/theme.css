@@ -1,6 +1,6 @@
 @media (prefers-color-scheme: dark) {
   :root {
-    --fg-primary: white;
+    --fg-primary: green;
     --bg-primary: #B2AC88;
   }
 }
