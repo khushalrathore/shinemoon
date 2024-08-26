@@ -1,0 +1,112 @@
+@font-face {
+  font-family: logofont;
+  src: url(./assets/fonts/CosmicVibrant.otf);
+}
+
+@font-face {
+  font-family: funkorama;
+  src: url(./assets/fonts/Funkorama.otf);
+}
+
+& {
+  --fg: rgb(17, 17, 17);
+  --bg: white;
+  --bg-faded: gainsboro;
+  --bg-grd: linear-gradient(130deg, yellow, red, fuchsia, dodgerblue, limegreen);
+  --bg-grd2: linear-gradient(-130deg, yellow, red, fuchsia, dodgerblue, limegreen);
+}
+
+
+html {
+  scroll-behavior: smooth;
+
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  font-family: "DM Sans", sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+  font-synthesis: none;
+  scroll-behavior: smooth;
+}
+
+/* 
+@media (prefers-color-scheme: dark) {
+  * {
+    background: pink;
+  }
+}
+ */
+
+
+#root {
+  display: grid;
+  grid-template-rows: max-content 1fr auto;
+}
+
+summary {
+  /* background: black; */
+  padding: 1rem;
+  border-radius: 20px;
+  position: relative;
+
+  * {
+    color: black !important;
+  }
+
+  &::marker {
+    color: black !important;
+  }
+
+  &::after {
+    inset: 0;
+    background: whitesmoke;
+    border: 1px solid gainsboro;
+    content: '';
+    z-index: -1;
+    position: absolute;
+    border-radius: 20px;
+
+  }
+
+  &::-webkit-details-marker {
+    display: none !important;
+  }
+
+  &::marker {
+    display: none !important;
+
+  }
+}
+
+summary::-webkit-details-marker {
+  display: none !important;
+}
+
+summary::marker {
+  display: none !important;
+}
+
+details {
+  position: relative;
+
+  &::after {
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    border-top: 2px solid black;
+    border-right: 2px solid black;
+    rotate: 135deg;
+    content: '';
+    right: 1rem;
+    top: 1rem;
+  }
+}

@@ -1,0 +1,44 @@
+/* CancellationAndRefundPolicy.module.css */
+
+/* Container styles */
+.policyContainer {
+    padding: 1rem 2rem;
+    /* Default padding */
+    min-height: 100vh;
+    /* Important: Use vh for viewport height */
+}
+
+/* Adjusted padding for larger screens */
+@media only screen and (min-width: 51em) {
+    .policyContainer {
+        padding: 1rem 3.236rem;
+    }
+}
+
+/* Heading styles */
+h2 {
+    font-size: 1.5rem;
+    margin-bottom: 1.5rem;
+}
+
+h3 {
+    font-size: 1.3rem;
+    margin-top: 1.5rem;
+}
+
+/* Paragraph styles */
+.pCp {
+    font-size: 1rem;
+    line-height: 1.5;
+    margin-bottom: 1rem;
+}
+
+/* Link styles */
+.link {
+    text-decoration: none;
+    color: inherit;
+}
+
+.link:hover {
+    text-decoration: underline;
+}

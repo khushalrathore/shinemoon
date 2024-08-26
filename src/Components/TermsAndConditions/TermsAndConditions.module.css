@@ -1,0 +1,11 @@
+@media only screen and (min-width:50em) {
+  .TermsAndConditions {
+    padding: 1rem 3.236rem;
+  }
+}
+
+@media only screen and (max-width:50em) {
+  .TermsAndConditions {
+    padding: 1rem 2rem;
+  }
+}

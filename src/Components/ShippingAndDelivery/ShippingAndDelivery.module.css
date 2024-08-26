@@ -1,0 +1,49 @@
+/* ShippingAndDelivery.module.css */
+
+/* Container styles */
+.deliveryContainer {
+  padding: 1rem 2rem;
+  /* Default padding */
+  min-height: 100vh;
+  /* Important: Use vh for viewport height */
+}
+
+/* Adjusted padding for larger screens */
+@media only screen and (min-width: 51em) {
+  .deliveryContainer {
+    padding: 1rem 3.236rem;
+  }
+}
+
+/* Heading styles */
+.heading2 {
+  font-size: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.heading3 {
+  font-size: 1.3rem;
+  margin-top: 1.5rem;
+}
+
+/* Paragraph and list styles */
+.paragraph {
+  font-size: 1rem;
+  line-height: 1.5;
+  margin-bottom: 1rem;
+}
+
+.list {
+  margin-bottom: 1rem;
+  margin-left: 1.5rem;
+}
+
+/* Link styles */
+.link {
+  text-decoration: none;
+  color: inherit;
+}
+
+.link:hover {
+  text-decoration: underline;
+}

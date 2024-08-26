@@ -1,0 +1,130 @@
+@media only screen and (max-width:50em) {
+  .footerCard {
+    display: none;
+  }
+
+  .footerMain {
+    padding: 1rem 2rem !important;
+  }
+
+  .footerMainDiv1 {
+
+    a {
+      font-family: "logofont" !important;
+      -webkit-background-clip: text;
+      background-clip: text;
+      -webkit-text-fill-color: white !important;
+      background-image: var(--bg-grd2);
+    }
+  }
+}
+
+.footerMain {
+  * {
+    font-family: Poppins;
+  }
+
+  min-height: 100% !important;
+  padding: 1rem 2rem;
+  background: black;
+  color: ghostwhite;
+
+  .footerMainDiv1 {
+    color: rgba(255, 255, 255, 0.1);
+    font-weight: 900;
+    font-size: 2.75rem;
+    border-bottom: 1px solid rgba(248, 248, 255, 0.2436);
+
+    a {
+      font-family: "logofont" !important;
+      -webkit-background-clip: text;
+      background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-image: var(--bg-grd2);
+      background-size: 800%;
+    }
+
+    font-weight: 700;
+    background-size: cover;
+    background-image: url(https://allthatsinteresting.com/wordpress/wp-content/uploads/2013/06/wes-anderson-gifs-171.gif);
+    -webkit-background-clip: text;
+    background-clip: text;
+  }
+
+  .footerMainDiv2 {
+    padding-block: 1rem;
+    background: black;
+    display: flex;
+    justify-content: space-between;
+    align-items: start;
+    gap: 1rem;
+    flex-wrap: wrap;
+
+    .footerCard {
+      width: 150px;
+      background-size: cover !important;
+      background-position: center center !important;
+      background-repeat: no-repeat !important;
+      height: 150px;
+      border-radius: 16.18px;
+      /* filter: invert(1) hue-rotate(90deg) contrast(1) */
+    }
+
+    ul {
+      list-style: none;
+      font-weight: bold;
+
+
+      li {
+        font-weight: initial;
+        padding-block: 0.25rem;
+        font-size: 0.95rem;
+        color: gainsboro;
+        cursor: pointer;
+        transition: all 150ms;
+        position: relative;
+
+        &:first-child {
+          padding-top: 1rem;
+        }
+
+
+
+        &:hover {
+          color: white;
+          font-size: 500;
+        }
+      }
+    }
+  }
+
+  .footerMainDiv3 {
+    padding-block: 1rem;
+    background: black;
+    display: flex;
+    justify-content: space-between;
+    align-items: start;
+    gap: 1rem;
+    flex-wrap: wrap;
+
+    ul {
+      list-style: none;
+      display: flex;
+      gap: 1rem;
+
+      li {
+        border-radius: 100px;
+        padding: 0.125rem 0.5rem;
+        font-size: 0.85rem;
+        color: white;
+      }
+    }
+  }
+}
+
+
+a {
+  text-decoration: none;
+  color: inherit;
+  cursor: pointer;
+}

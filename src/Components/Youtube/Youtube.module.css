@@ -1,0 +1,62 @@
+.ytDiv {
+    /* background: rgba(0, 0, 0, 1); */
+    color: white;
+    margin-block: 2rem 0;
+    padding: 2rem 3.236rem;
+    z-index: 0;
+    position: relative;
+
+    .bgWrapper {
+        inset: 0;
+        position: absolute;
+        z-index: -1;
+        /* background: var(--fg); */
+        /* animation: rotateBg 10s linear infinite alternate-reverse;
+        background-size: 400%; */
+        opacity: 0.8;
+    }
+}
+
+.ytHeading {
+    font-size: 2.125rem;
+    display: flex;
+    min-width: max-content;
+
+}
+
+.videoLibrary {
+    display: flex;
+    gap: 2rem;
+    margin-top: 2rem;
+    justify-content: start;
+    align-items: center;
+    /* overflow-x: scroll; */
+    scroll-behavior: smooth;
+    flex-wrap: wrap;
+}
+
+
+@keyframes rotateBg {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    100% {
+        background-position: 100% 50%;
+    }
+}
+
+@media (max-width:716px) {
+    .ytDiv {
+        padding: 2rem !important;
+        align-items: center !important;
+        display: flex;
+        flex-direction: column !important;
+        justify-content: center !important;
+        min-width: 100%;
+    }
+
+    .videoLibrary {
+        justify-content: center !important;
+    }
+}

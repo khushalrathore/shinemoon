@@ -1,0 +1,213 @@
+.recentsDiv {
+    padding: 1rem 3.236rem;
+    /* background: #000; */
+    padding-bottom: 2.5rem;
+
+    * {
+        a {
+            text-decoration: none !important;
+        }
+    }
+}
+
+.recentsHeading {
+    font-size: 2.125rem;
+    display: flex;
+    min-width: max-content;
+    color: white;
+}
+
+.recentsLibrary {
+    margin-top: 2.25rem;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: start;
+    gap: 2rem;
+    font-weight: 700 !important;
+
+}
+
+.l2_hdiv2_images {
+
+    flex: 1 !important;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: start;
+    border-radius: 20px;
+    min-height: 150px !important;
+    padding: 1rem;
+    position: relative;
+
+    .bgLayer,
+    .bgLayer2 {
+        border-radius: 20px;
+        position: absolute;
+        inset: 0;
+        z-index: 0;
+        background-size: cover !important;
+    }
+
+    .bgLayer {
+        background-position: center left !important;
+    }
+
+    span {
+        font-size: 1.25rem;
+        z-index: 1;
+        border-radius: 8px;
+        padding: 0.25rem 0.5rem;
+
+        color: black;
+        background: rgba(255, 255, 255, 0.9);
+        backdrop-filter: blur(50px);
+        -webkit-backdrop-filter: blur(50px);
+        display: inline;
+    }
+
+    button {
+        z-index: 1;
+
+    }
+}
+
+.bgRWrapper {
+    position: absolute;
+    inset: 0;
+    z-index: 1;
+}
+
+
+.card {
+    border-radius: 16px;
+    max-width: 300px;
+    position: relative;
+    z-index: 0;
+    height: 120px;
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: start;
+    align-items: center;
+    cursor: pointer;
+
+    &::before {
+        position: absolute;
+        z-index: -1;
+        inset: 0;
+        content: '';
+        background: rgba(255, 255, 255, 0.5);
+        border-radius: 18px;
+
+    }
+
+    *:not(.cardImage) {
+        padding-inline: 1rem;
+        color: rgba(0, 0, 0, 0.7);
+        font-family: Space Mono;
+
+    }
+}
+
+
+.cardHeading {
+    font-size: 1.5rem;
+    overflow: hidden;
+
+}
+
+.textOfCard {
+    display: flex;
+    justify-content: space-between;
+    padding: 0.5rem 0.5rem 0 0.5rem !important;
+    gap: 1rem;
+    width: 100%;
+}
+
+.cardLink {
+    position: absolute;
+    inset: 0;
+    z-index: 1;
+}
+
+.cardViews,
+.cardTime {
+    font-size: 12px;
+    border-radius: 10dvw;
+    background: rgba(0, 0, 0, 0.13) !important;
+    color: white;
+    background-size: 300%;
+    border: 1px solid black;
+    padding-inline: 0.5rem !important;
+    position: relative;
+    font-weight: bold;
+
+    animation: rotateBg 10s linear infinite alternate-reverse !important;
+    background-size: 800% !important;
+}
+
+.cardTime {
+    align-self: flex-end;
+}
+
+@keyframes rotateBg {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    100% {
+        background-position: 100% 50%;
+    }
+}
+
+.cardSticker {
+    position: absolute;
+    width: 100px;
+    height: 80%;
+    bottom: 0;
+    right: 0;
+    display: flex;
+    justify-content: end;
+    align-items: end;
+    font-size: 3rem;
+    font-family: Space Mono;
+    font-style: italic;
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    opacity: 0.7;
+    z-index: -1;
+    font-weight: 100;
+    overflow: hidden;
+    border-radius: 50% 0 20% 0;
+}
+
+@media (max-width:716px) {
+    details {
+        min-width: 100% !important;
+    }
+
+    .recentsDiv {
+        padding: 2rem !important;
+        align-items: center !important;
+        display: flex;
+        flex-direction: column !important;
+        justify-content: center !important;
+        align-items: center !important;
+        padding-top: 0 !important;
+
+    }
+
+    .recentsLibrary {
+        margin-top: 2.25rem;
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: space-around !important;
+        gap: 2rem;
+    }
+
+    .videoLibrary {
+        justify-content: center !important;
+    }
+}

@@ -1,0 +1,164 @@
+@media only screen and (max-width:50em) {
+  .socials {
+    margin-top: 2rem;
+    padding-top: 3rem;
+    gap: 2rem !important;
+    display: flex !important;
+  }
+
+  .contactMeme {
+    width: 300px !important;
+    height: 300px !important;
+    margin-left: -2rem;
+
+  }
+
+  .preFooterDivHeading {
+    display: flex;
+    justify-content: space-between;
+    max-width: 50ch !important;
+
+    div {
+      gap: 2rem !important;
+
+      span {
+        font-size: 1.125rem !important;
+
+      }
+    }
+  }
+
+  .preFooterDiv {
+    align-items: start !important;
+    padding-bottom: 0 !important;
+    padding-inline: 1rem !important;
+    margin-bottom: -2rem !important;
+
+
+  }
+}
+
+.preFooterDiv {
+  padding: 1rem;
+  color: ghostwhite;
+  opacity: 1;
+  background-image: linear-gradient(to bottom, black 0%, black 100%);
+  border-radius: 0px 0px 0 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: start;
+  padding-inline: 2rem;
+
+
+  .preFooterDivHeading {
+
+    display: flex;
+    justify-content: start;
+    align-items: start;
+    max-width: 70ch;
+
+    div {
+      display: flex;
+      gap: 0.5rem;
+      flex-wrap: wrap;
+      align-items: baseline;
+
+      span {
+        font-size: 2.5rem;
+        font-weight: 500;
+
+      }
+
+      p {
+        color: rgba(0, 0, 0, 0.72);
+        opacity: 0.6;
+        font-size: 1.5rem;
+        font-weight: 500;
+        text-transform: lowercase;
+
+      }
+    }
+
+    .contactMeme {
+      background: url(https://media1.tenor.com/m/D5w6qK5vBdYAAAAd/tom-and-jerry-tom.gif)no-repeat center center;
+      width: calc(2*335px);
+      height: calc(2*152px);
+      background-size: cover;
+      border-radius: 0.75em !important;
+      margin-block: 2rem;
+
+    }
+  }
+
+  .preFooterDivContent {
+    position: relative;
+    margin-block: 1rem;
+    border-radius: 20px;
+    background: gainsboro;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+
+    padding-block: 2rem;
+
+    position: relative;
+    opacity: 1;
+    z-index: 1;
+
+  }
+}
+
+.socials {
+  background: black;
+  display: flex;
+  justify-content: space-evenly;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+  padding-block: 0.5rem;
+
+
+  .icon1,
+  .icon2,
+  .icon3,
+  .icon4 {
+    width: 40px;
+    height: 40px;
+    background: white;
+    border-radius: 50%;
+    background-size: cover !important;
+    transition: all 150ms;
+
+    &:hover {
+      scale: 1.2;
+    }
+  }
+
+  .icon1 {
+    background: url(../../assets/FB.svg)no-repeat center center;
+
+  }
+
+  .icon2 {
+    background: url(../../assets/X.svg)no-repeat center center;
+
+  }
+
+  .icon3 {
+    background: url(../../assets/IG.svg)no-repeat center center;
+
+  }
+
+  .icon4 {
+    background: url(../../assets/YT.svg)no-repeat center center;
+
+  }
+
+  a {
+    color: white;
+
+  }
+}
