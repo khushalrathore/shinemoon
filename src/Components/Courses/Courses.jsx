@@ -13,7 +13,7 @@ function Courses () {
 
           <div className={ styles.coursesDivContent }>
             <div className={ styles.coursesList }>
-              { coursesInfo.map( ( member ) => <CourseListItem key={ member.id } Title={ member.title } Image={ member.icon } Stats={ member.time } Desc={ member.desc } Price={ member.price } /> ) }
+              { coursesInfo.map( ( member, index ) => <CourseListItem key={ index } Title={ member.title } Image={ member.icon } downloadLink={ member.link } Stats={ member.time } Desc={ member.desc } Price={ member.price } /> ) }
             </div>
             {/* <div className={styles.courseDesc}>
               {coursesInfo.map((member) => <CourseItemDescription key={member.id} Title={member.title} Image={member.icon} Desc={member.desc} />)}

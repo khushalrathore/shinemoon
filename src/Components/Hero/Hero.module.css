@@ -218,43 +218,9 @@
     }
 }
 
-.circleBar {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 100px;
-    height: 100px;
-    border: 2px solid transparent;
-    background: var(--bg-grd);
-    padding: 2rem !important;
-    animation: alternate rotateShape 10s linear infinite;
-    animation: alternate-reverse rotateShape 10s linear infinite;
-    border-radius: 50% !important;
 
-    &::before {
-        inset: 0;
-        content: '';
-        border-radius: 50% !important;
-        position: absolute;
-        background: rgb(255, 255, 255, 0.9) !important;
-        backdrop-filter: blur(50px);
-    }
-}
 
-.Arrow {
-    position: absolute;
-    width: 40px;
-    height: 40px;
-    font-size: 2rem;
-    background: url(../../assets/images/down.png);
-    transform: rotate(0deg) !important;
-    background-repeat: no-repeat;
-    background-position: center center;
-    background-size: contain;
-    animation: alternate rotateShape 1s linear infinite;
-    animation: alternate-reverse rotateShape 1s linear infinite;
-}
+
 
 @keyframes rotateShapeRev {
     to {
@@ -669,4 +635,42 @@
 .active {
     background: black !important;
     color: white !important;
+}
+
+
+
+
+
+.circleBar {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100px;
+    height: 100px;
+    border: 2px solid transparent;
+    background: var(--bg-grd);
+    padding: 2rem;
+    border-radius: 50%;
+    box-sizing: border-box;
+    /* Added to ensure padding is included in width and height */
+
+    &::before {
+        content: '';
+        position: absolute;
+        inset: 0;
+        border-radius: 50%;
+        background: rgba(255, 255, 255, 0.9);
+        backdrop-filter: blur(50px);
+        -webkit-backdrop-filter: blur(50px);
+    }
+
+    .Arrow {
+        position: absolute;
+        width: 40px;
+        height: 40px;
+        font-size: 2rem;
+        background: url('../../assets/images/down.png') no-repeat center center;
+        background-size: contain;
+    }
 }

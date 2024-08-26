@@ -4,43 +4,6 @@ import formImg from "../../assets/images/hero/hero.jpg";
 import heroImg from "../../assets/images/hero/form.jpg"
 
 function Footer () {
-  // useEffect(() => {
-  //   function adjustFooter() {
-  //     const footer = document.querySelector('footer');
-  //     const bodyHeight = document.body.offsetHeight;
-  //     const windowHeight = window.innerHeight;
-  //     const footerHeight = footer.offsetHeight;
-
-  //     if (bodyHeight + footerHeight < windowHeight) {
-  //       footer.style.position = 'absolute';
-  //       footer.style.bottom = '0';
-  //       footer.style.width = '100%';
-  //     } else {
-  //       footer.style.position = 'static';
-  //     }
-  //   }
-
-  //   // Initial adjustment
-  //   adjustFooter();
-
-  //   // Adjust on window resize
-  //   window.addEventListener('resize', adjustFooter);
-
-  //   // Adjust when content loads
-  //   window.addEventListener('load', adjustFooter);
-
-  //   // Adjust when content changes (useful for SPAs or dynamic content)
-  //   const observer = new MutationObserver(adjustFooter);
-  //   observer.observe(document.body, { childList: true, subtree: true });
-
-  //   // Cleanup function
-  //   return () => {
-  //     window.removeEventListener('resize', adjustFooter);
-  //     window.removeEventListener('load', adjustFooter);
-  //     observer.disconnect();
-  //   };
-  // }, []);
-
   const date = new Date().getFullYear();
   return (
     <footer className={ styles.footerMain }>

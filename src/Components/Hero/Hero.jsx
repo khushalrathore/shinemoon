@@ -45,10 +45,10 @@ const Hero = () => {
             <div className={ styles.marquee }>ShineMoon</div>
             <div className={ styles.l1 }>
                 <div className={ styles.hDiv1 }>
-                    <span>Lorem ipsum dolor sit amet consectetur, adipisicing elit.</span>
-                    <h1>Powered by creators everywhere.</h1>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi autem veritatis maxime amet ipsum cupiditate ad. Mollitia, vitae. Possimus, quaerat.</p>
-                    <a href='/' aria-label='Learn More'>Check Now</a>
+                    <span>dekhoo jaa ke</span>
+                    <h1>Simplest Way To Learn</h1>
+                    <p>Ye course pakka se video editor bana dega jada socho mat lelo or kuch sikh lo, kuki syd ye paise vase bhi cigrattee me udaa doge isse acha kuch use lelo. Padhayi to kr li jitni krni thi apni skill pe focus kr ke aage baddo or professional ban jaooooooooo</p>
+                    <a href='/courses' aria-label='Learn More'>Check Now</a>
                 </div>
                 <div className={ styles.circleBar } onClick={ () => window.location.href = '#happening' }>
                     <div className={ styles.Arrow }>

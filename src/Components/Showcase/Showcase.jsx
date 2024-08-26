@@ -45,7 +45,11 @@ const Showcase = () => {
                 <span>TOP<br></br>CREATORS : </span>
                 <div className={ styles.vDiv1_icon } style={ { backgroundImage: `url(${ creatorIcon })` } }></div>
                 <div className={ styles.vDiv1_joinUs } onClick={ () => window.location.href = '#happening' }>
-                    <p><span>JOIN US</span></p>
+                    <p style={ { position: `relative` } }>
+                        <a style={ { position: `absolute`, inset: 0, zIndex: 2 } } href='https://www.instagram.com/ig_shinemoon/' target='_blank' aria-label='Join Us'></a>
+                        <span>JOIN US</span>
+
+                    </p>
                 </div>
             </div>
 
