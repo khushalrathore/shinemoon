@@ -13,12 +13,11 @@
         padding: 1rem 2rem !important;
     }
 
-    nav {
-        /* ul {
+    /* nav {
+        ul {
             flex-wrap: wrap !important;
-        } */
-        /* display: none !important; */
-    }
+        }
+    } */
 
     span.logo {
         a {
