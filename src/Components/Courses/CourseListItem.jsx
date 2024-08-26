@@ -70,7 +70,7 @@ function CourseListItem ( { Title, Image, Stats, Price, Desc, downloadLink } ) {
       </div>
       { paymentSuccess ? (
         <button className={ styles.payButton } style={ { position: 'relative' } }>
-          <a style={ { position: 'absolute', inset: 0, zIndex: 1 } } href={ downloadLink } aria-label='Download Course'></a>
+          <a style={ { position: 'absolute', inset: 0, zIndex: 1 } } href={ downloadLink } target='_blank' aria-label='Download Course'></a>
           Download
         </button>
       ) : (
