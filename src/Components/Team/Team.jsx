@@ -1,9 +1,10 @@
+import { teamInfo } from './teamData';
+import TeamMember from './TeamMember';
+
 import styles from './Team.module.css'
 import '../../globals.css';
-import TeamMember from './TeamMember';
-import { teamInfo } from '../../data';
 
-function Team () {
+const Team = () => {
   return (
     <div className="pageDiv">
       <div className="pageTitle">
@@ -27,4 +28,5 @@ function Team () {
     </div>
   );
 }
-export default Team;
+
+export default Team

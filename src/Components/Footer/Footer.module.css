@@ -70,31 +70,30 @@
       /* filter: invert(1) hue-rotate(90deg) contrast(1) */
     }
 
-    ul {
-      list-style: none;
-      font-weight: bold;
 
+  }
 
-      li {
-        font-weight: initial;
-        padding-block: 0.25rem;
-        font-size: 0.95rem;
-        color: gainsboro;
-        cursor: pointer;
-        transition: all 150ms;
-        position: relative;
+  .list {
+    list-style: none;
+    font-weight: bold;
+  }
 
-        &:first-child {
-          padding-top: 1rem;
-        }
+  .listElem {
+    font-weight: initial;
+    padding-block: 0.25rem;
+    font-size: 0.95rem;
+    color: gainsboro;
+    cursor: pointer;
+    transition: all 150ms;
+    position: relative;
 
+    &:first-child {
+      padding-top: 1rem;
+    }
 
-
-        &:hover {
-          color: white;
-          font-size: 500;
-        }
-      }
+    &:hover {
+      color: white;
+      font-size: 500;
     }
   }
 

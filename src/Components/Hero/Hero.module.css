@@ -21,6 +21,10 @@
 }
 
 @media (max-width:716px) {
+    .glassLayer {
+        display: none !important;
+    }
+
     .heroDiv {
         padding: 1rem 1rem !important;
     }
@@ -249,12 +253,11 @@
     .glassLayer {
         position: absolute;
         inset: 0;
-        width: 45%;
+        width: 50%;
         z-index: 0;
         background: rgba(0, 0, 0, 0.2);
-        backdrop-filter: blur(5px);
-        filter: blur(100px);
-        -webkit-backdrop-filter: blur(5px);
+        backdrop-filter: blur(35px);
+        -webkit-backdrop-filter: blur(35px);
         background-repeat: repeat-x 10px;
         overflow: hidden;
         border-top-left-radius: 20px;

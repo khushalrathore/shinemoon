@@ -1,16 +1,19 @@
 import React, { useState } from 'react';
+import { shinemoon_stats, showcase_sideBar, shuffleArray } from './showcaseData';
 import styles from './Showcase.module.css';
+
 import a from '../../assets/videos/a.mp4';
 import b from '../../assets/videos/b.mp4';
 import c from '../../assets/videos/c.mp4';
-import { top_things, showcase_side, shuffleArray } from '../../data';
 
 const Showcase = () => {
+
     const creatorIcon = "https://art.ngfiles.com/images/2947000/2947278_mihar34_pfp.png?f1672060785";
     const [ currentVideoIndex, setCurrentVideoIndex ] = useState( 2 );
     const [ transitioning, setTransitioning ] = useState( false );
     const [ currentShowcaseIndex, setCurrentShowcaseIndex ] = useState( 0 );
     const videos = [ a, b, c ];
+
     // const videos = shuffleArray( video )
     const handleVideoChange = ( e ) => {
         setTransitioning( true );
@@ -31,14 +34,13 @@ const Showcase = () => {
     const handleShowcaseChange = ( direction ) => {
         setCurrentShowcaseIndex( ( prevIndex ) => {
             if ( direction === 'prev' ) {
-                return prevIndex === 0 ? showcase_side.length - 1 : prevIndex - 1;
+                return prevIndex === 0 ? showcase_sideBar.length - 1 : prevIndex - 1;
             } else if ( direction === 'next' ) {
-                return prevIndex === showcase_side.length - 1 ? 0 : prevIndex + 1;
+                return prevIndex === showcase_sideBar.length - 1 ? 0 : prevIndex + 1;
             }
             return prevIndex;
         } );
     };
-
     return (
         <div className={ styles.showcaseDiv } id="happening">
             <div className={ styles.vDiv1 }>
@@ -55,8 +57,8 @@ const Showcase = () => {
 
             <div className={ styles.vDiv2 }>
                 <div className={ styles.vDiv2_top }>
-                    <div className={ styles.top_things }>
-                        { top_things.map( ( item, index ) => (
+                    <div className={ styles.shinemoon_stats }>
+                        { shinemoon_stats.map( ( item, index ) => (
                             <span key={ index }>
                                 <em>( </em>
                                 { item.num }
@@ -92,14 +94,14 @@ const Showcase = () => {
                     <div onClick={ () => handleShowcaseChange( 'prev' ) }>{ `<` }</div>
                     <div onClick={ () => handleShowcaseChange( 'next' ) }>{ `>` }</div>
                 </div>
-                <div className={ styles.showcaseSide } onClick={ () => window.location.href = `${ showcase_side[ currentShowcaseIndex ].link }` }>
-                    <div className={ styles.vDiv3_2 } style={ { backgroundImage: `url(${ showcase_side[ currentShowcaseIndex ].image })` } }>
+                <div className={ styles.showcaseSide } onClick={ () => window.location.href = `${ showcase_sideBar[ currentShowcaseIndex ].link }` }>
+                    <div className={ styles.vDiv3_2 } style={ { backgroundImage: `url(${ showcase_sideBar[ currentShowcaseIndex ].image })` } }>
                     </div>
-                    <div className={ styles.vDiv3_3 } title={ showcase_side[ currentShowcaseIndex ].name }>
-                        { showcase_side[ currentShowcaseIndex ].name.substring( 0, 14 ) + "..." }
+                    <div className={ styles.vDiv3_3 } title={ showcase_sideBar[ currentShowcaseIndex ].name }>
+                        { showcase_sideBar[ currentShowcaseIndex ].name.substring( 0, 14 ) + "..." }
                     </div>
-                    <div className={ styles.vDiv3_4 } title={ showcase_side[ currentShowcaseIndex ].info }>
-                        { showcase_side[ currentShowcaseIndex ].info.substring( 0, 28 ) + "..." }
+                    <div className={ styles.vDiv3_4 } title={ showcase_sideBar[ currentShowcaseIndex ].info }>
+                        { showcase_sideBar[ currentShowcaseIndex ].info.substring( 0, 28 ) + "..." }
                     </div>
                 </div>
             </div>

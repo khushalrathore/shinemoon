@@ -1,7 +1,6 @@
-import React from 'react'
-import styles from "./Youtube.module.css"
-import VideoCard from './Card/VideoCard'
-import { videoLibraryList } from '../../data'
+import { videoLibraryList } from './youtubeData';
+import VideoCard from './Card/VideoCard';
+import styles from "./Youtube.module.css";
 
 const Youtube = () => {
 
@@ -21,7 +20,8 @@ const Youtube = () => {
             </details>
 
         </div>
-    )
-}
+    );
 
-export default Youtube
+};
+
+export default Youtube;

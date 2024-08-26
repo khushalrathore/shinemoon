@@ -1,5 +1,5 @@
+import { listItems } from './headerData'
 import styles from './Header.module.css'
-import { listItems } from '../../data.jsx'
 
 const Header = () => {
     return (

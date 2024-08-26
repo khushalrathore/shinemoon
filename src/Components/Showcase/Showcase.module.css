@@ -25,7 +25,7 @@
         padding: 1rem !important;
     }
 
-    .top_things {
+    .shinemoon_stats {
         gap: 1rem !important;
         justify-content: center !important;
     }
@@ -160,7 +160,7 @@ strong {
 .vDiv2 {
 
     .vDiv2_top {
-        .top_things {
+        .shinemoon_stats {
             display: flex;
             justify-content: space-between;
             align-items: center;

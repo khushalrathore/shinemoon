@@ -1,29 +1,13 @@
-import React, { useState } from 'react';
+import { recentsData, scrollDown, getRandomPair } from './recentsData';
 import styles from './RecentlyAdded.module.css';
-import { colors } from '../../data';
-import { recentsData } from '../../data';
 
 const RecentlyAdded = () => {
-    const [ style, setStyle ] = useState( { color: 'white' } );
 
-    const handleUIChange = () => {
-        setStyle( ( prevStyle ) => ( {
-            color: prevStyle.color === 'white' ? 'blue' : 'white',
-        } ) );
-    };
-
-    const getRandomPair = () => colors[ Math.floor( Math.random() * colors.length ) ];
-    const scrollDown = () => {
-        window.scrollBy( {
-            top: parseFloat( getComputedStyle( document.documentElement ).fontSize ) * 10, // Scroll by 1rem
-            behavior: 'smooth' // Optional: for smooth scrolling
-        } );
-    }
     return (
         <div className={ styles.recentsDiv } onClick={ scrollDown } style={ { position: `relative` } }>
             {/* <a style={ { position: `absolute`, inset: 0, zIndex: 1 } } aria-label='Recents' href='#recents'></a> */ }
-            <details onToggle={ handleUIChange }>
-                <summary style={ style }>
+            <details>
+                <summary>
                     <div>
                         <h1 className={ styles.recentsHeading }>Recently Added</h1>
                         <sub style={ { fontSize: '1.25rem' } }>Courses, YT Videos & More</sub>
@@ -72,6 +56,7 @@ const RecentlyAdded = () => {
             </details>
         </div>
     );
+
 };
 
 export default RecentlyAdded;

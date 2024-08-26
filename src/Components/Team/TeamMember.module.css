@@ -108,6 +108,7 @@
       border-radius: 50%;
       background: transparent;
       backdrop-filter: blur(35px);
+      -webkit-backdrop-filter: blur(35px);
       z-index: -1;
     }
   }

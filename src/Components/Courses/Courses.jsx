@@ -1,8 +1,10 @@
-import { coursesInfo } from '../../data';
-import styles from './Courses.module.css';
+import { coursesInfo } from './coursesData';
 import CourseListItem from './CourseListItem';
+
+import styles from './Courses.module.css';
 import '../../globals.css';
-function Courses () {
+
+const Courses = () => {
   return (
     <>
       <div className="pageDiv">
@@ -26,4 +28,4 @@ function Courses () {
   );
 }
 
-export default Courses;
+export default Courses

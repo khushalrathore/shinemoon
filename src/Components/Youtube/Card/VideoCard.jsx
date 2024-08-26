@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
+import { colors, colorPair, formatViewCount } from '../youtubeData';
 import styles from './VideoCard.module.css';
-import { colors } from '../../../data'; // Ensure this path is correct
 
 const VideoCard = ( { videoUrl, index } ) => {
     const [ videoData, setVideoData ] = useState( null );
@@ -40,37 +40,18 @@ const VideoCard = ( { videoUrl, index } ) => {
         }
     }, [ videoUrl, videoId, apiKey, cacheKey ] );
 
-    function formatViewCount ( views ) {
-        if ( views >= 1_000_000_000 ) {
-            return ( views / 1_000_000_000 ).toFixed( 1 ) + 'B';
-        } else if ( views >= 1_000_000 ) {
-            return ( views / 1_000_000 ).toFixed( 1 ) + 'M';
-        } else if ( views >= 1_000 ) {
-            return ( views / 1_000 ).toFixed( 0 ) + 'K';
-        } else {
-            return views.toString();
-        }
-    }
-
-    function getRandomColorPair () {
-        const randomIndex = Math.floor( Math.random() * colors.length );
-        return colors[ randomIndex ];
-    }
-
     if ( !videoData ) {
         return (
             <div style={ { backgroundImage: `var(--bg-grd2)`, WebkitBackgroundClip: `text`, backgroundClip: `text`, WebkitTextFillColor: `transparent` } }>
                 Loading...
             </div>
         );
-    }
-
-    const colorPair = getRandomColorPair();
+    };
 
     return (
         <div
             className={ styles.card }
-            style={ { background: `linear-gradient(${ colorPair.light }, ${ colorPair.dark })`, backgroundSize: `200%` } }
+            style={ { background: `url(${ videoData.thumbnailUrl })`, backgroundSize: `cover`, backgroundPosition: `top -40px center` } }
             title={ videoData.title }
             onClick={ () => window.open( videoUrl, '_blank' ) }
         >

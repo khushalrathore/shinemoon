@@ -1,8 +1,9 @@
 import { useState } from 'react';
-import { exploreTags, formTopicsList, reviewsList, fb, ig, tw, yt } from '../../data.jsx';
+import { exploreTags, formTopicsList, reviewsList, fb, ig, tw, yt } from './heroData.jsx';
+import styles from './Hero.module.css';
+
 import formImg from "../../assets/images/hero/hero.jpg";
 import heroImg from "../../assets/images/hero/form.jpg"
-import styles from './Hero.module.css';
 
 const Hero = () => {
     const [ tags, setTags ] = useState( [] );
