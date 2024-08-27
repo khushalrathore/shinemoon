@@ -1,9 +1,14 @@
-export const listItems = [
+import * as kr from "../../data.jsx"
+
+export const projectName = kr.projectName;
+
+export const primaryNav = [
     {
         title: "Home",
         link: "/",
 
-    }, {
+    },
+    {
         title: "Portfolio",
         link: "/",
 
@@ -18,5 +23,14 @@ export const listItems = [
         link: "/team",
 
     }
+];
+
+export const secondaryNav = [
+    {
+        title: "Contact",
+        link: "/contact-us",
+
+    }
+
 ];
 

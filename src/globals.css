@@ -3,6 +3,150 @@
   --secondary: gray;
 }
 
+li {
+  list-style: none !important;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.isClickable {
+  position: absolute !important;
+  inset: 0 !important;
+  z-index: 1 !important;
+}
+
+.flex_sb_c {
+  display: flex !important;
+  justify-content: space-between !important;
+  align-items: center !important;
+  gap: 1rem !important;
+  flex-wrap: wrap !important;
+}
+
+.takeMeThere {
+  width: 20px;
+  height: 20px;
+  background: rgba(255, 255, 255, 0.7) !important;
+  backdrop-filter: blur(50px);
+  -webkit-backdrop-filter: blur(50px);
+  position: relative;
+  border-radius: 50%;
+
+  &::after {
+    position: absolute;
+    content: '';
+    inset: 0;
+    width: 6px;
+    height: 6px;
+    top: 50%;
+    left: 50%;
+    border-right: 1px solid black;
+    border-top: 1px solid black;
+    transform: translate(-50%, -50%);
+    transition: all 250ms;
+  }
+
+  &:hover {
+    background: white !important;
+  }
+
+}
+
+.grd_txt {
+  text-decoration: none !important;
+  background: var(--bg-grd2) !important;
+  -webkit-background-clip: text !important;
+  background-clip: text !important;
+  -webkit-text-fill-color: transparent !important;
+}
+
+.grd_2_txt {
+  text-decoration: none !important;
+  background-image: var(--bg-grd2) !important;
+  -webkit-background-clip: text !important;
+  background-clip: text !important;
+  -webkit-text-fill-color: transparent !important;
+}
+
+.grd_bg {
+  background-image: var(--bg-grd) !important;
+  animation: rotateBg 2s linear infinite alternate-reverse !important;
+  background-size: 800% !important;
+}
+
+.grd_2_bg {
+  background: var(--bg-grd2) !important;
+  animation: rotateBg 2s linear infinite alternate-reverse !important;
+  background-size: 800% !important;
+}
+
+.grd_bg_hover {
+
+  &:hover,
+  &:focus,
+  &:focus-visible,
+  &:focus-visible,
+  &:focus-within,
+  &:active {
+    background-image: var(--bg-grd) !important;
+    animation: rotateBg 2s linear infinite alternate-reverse !important;
+    background-size: 800% !important;
+  }
+}
+
+.grd_2_bg_hover {
+
+  &:hover,
+  &:focus,
+  &:focus-visible,
+  &:focus-visible,
+  &:focus-within,
+  &:active {
+    background-image: var(--bg-grd2) !important;
+    animation: rotateBg 2s linear infinite alternate-reverse !important;
+    background-size: 800% !important;
+  }
+}
+
+.grd_txt_hover {
+
+  &:hover,
+  &:focus,
+  &:focus-visible,
+  &:focus-visible,
+  &:focus-within,
+  &:active {
+    text-decoration: none !important;
+    background-image: var(--bg-grd) !important;
+    -webkit-background-clip: text !important;
+    background-clip: text !important;
+    -webkit-text-fill-color: transparent !important;
+    animation: rotateBg 2s linear infinite alternate-reverse !important;
+    background-size: 800% !important;
+  }
+}
+
+.grd_2_txt_hover {
+
+  &:hover,
+  &:focus,
+  &:focus-visible,
+  &:focus-visible,
+  &:focus-within,
+  &:active {
+    text-decoration: none !important;
+    background-image: var(--bg-grd2) !important;
+    -webkit-background-clip: text !important;
+    background-clip: text !important;
+    -webkit-text-fill-color: transparent !important;
+    animation: rotateBg 2s linear infinite alternate-reverse !important;
+    background-size: 800% !important;
+  }
+}
+
 @keyframes rotateBg {
   0% {
     background-position: 0% 50%;

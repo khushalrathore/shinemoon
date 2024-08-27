@@ -1,0 +1,21 @@
+@media (max-width:716px) {
+    .marquee {
+        display: none !important;
+    }
+}
+
+.marquee {
+    overflow-x: hidden !important;
+    font-family: logofont;
+    position: absolute;
+    font-size: 30rem;
+    z-index: -1;
+    background: var(--bg-grd);
+    -webkit-background-clip: text;
+    background-clip: text;
+    opacity: 0.02;
+
+    /* -webkit-text-fill-color: transparent;
+    animation: rotateBg 5s linear infinite alternate-reverse;
+    background-size: 500%; */
+}

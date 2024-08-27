@@ -1,0 +1,29 @@
+.exploreTagsUl {
+    list-style: none;
+    display: flex;
+    gap: 1.5rem;
+    margin-top: 1rem;
+    flex-wrap: wrap;
+}
+
+.exploreTag {
+    color: unset;
+    border: 2px dashed;
+    padding: 0.125rem 0.5rem;
+    border-radius: 10dvw;
+    text-transform: lowercase;
+
+    span {
+        font-size: 0.85rem;
+    }
+
+    &:hover,
+    &:focus,
+    &:focus-visible,
+    &:focus-visible,
+    &:focus-within,
+    &:active {
+        background: #000;
+        color: white;
+    }
+}

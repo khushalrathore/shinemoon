@@ -1,3 +1,11 @@
+export const projectName = 'ShineMoon'
+
+export const fb = "https://www.facebook.com/shine.moon.37625843/";
+export const ig = "https://www.instagram.com/ig_shinemoon/";
+export const yt = "https://www.youtube.com/channel/UCSWjcz32WGRPjEteBcE0tvA";
+export const tw = "https://x.com/i/flow/login?redirect_after_login=%2Fshinemoon221%2F";
+
+
 export const dummyVideoData = [
     {
         title: 'Sample Video 1',

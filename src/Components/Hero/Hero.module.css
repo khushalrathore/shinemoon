@@ -1,3 +1,5 @@
+@import url(../../globals.css);
+
 @media (max-width:1006px) {
     .circleBar {
         display: none;
@@ -18,11 +20,13 @@
     .l2_hdiv2 {
         display: none !important;
     }
+
+
 }
 
-@media (max-width:716px) {
-    .glassLayer {
-        display: none !important;
+@media (max-width:853px) {
+    .form_and_reviews {
+        padding: 2rem !important;
     }
 
     .heroDiv {
@@ -105,6 +109,13 @@
     }
 }
 
+@media (max-width:40em) {
+    .form_and_reviews {
+        flex-direction: column-reverse;
+
+    }
+}
+
 .heroDiv {
     margin-bottom: 2rem;
     overflow: hidden;
@@ -113,25 +124,8 @@
     position: relative;
 
 
-    .marquee {
-        font-family: logofont;
-        position: absolute;
-        font-size: 30rem;
-        z-index: -1;
-        rotate: -0deg;
-        background: var(--bg-grd);
-        -webkit-background-clip: text;
-        background-clip: text;
-        opacity: 0.13;
-        -webkit-text-fill-color: gainsboro;
-        filter: drop-shadow(0 0 30px white);
-        /* animation: rotateBg 5s linear infinite alternate-reverse; */
-        /* background-size: 500%; */
-        text-shadow: 0 0 1px rgba(255, 255, 255, 0.156);
-        overflow-x: hidden !important;
-
-    }
 }
+
 
 .l1,
 .l2 {
@@ -148,532 +142,141 @@
     /* justify-content: end; */
     position: relative;
 
+    * {
+
+        &:hover,
+        &:focus,
+        &:focus-visible,
+        &:focus-visible,
+        &:focus-within,
+        &:active {
+            outline: none;
+        }
+    }
+
 }
 
 .l2 {
     flex: 0.6
 }
 
-.hDiv1 {
-
-    padding: 1rem 0rem;
+/* hero text content */
+.heroTextContent {
+    padding: 1.5rem 1rem 2rem 0;
     flex: 0.4;
-    padding-block: 1.5rem 2rem;
 
-    padding-inline-end: 1rem;
     display: flex;
+    flex-wrap: wrap;
     flex-direction: column;
     gap: 1rem;
-    flex-wrap: wrap;
+}
 
-    span {
-        font-weight: 600;
-        font-size: 1.25rem;
-        max-width: 30ch;
-        color: rgba(50, 50, 50, 0.845);
-    }
+.heroTextTagline {
+    font-weight: 600;
+    font-size: 1.25rem;
+    max-width: 30ch;
+    color: rgba(50, 50, 50, 0.845);
+    text-transform: capitalize;
+}
 
-    h1 {
-        margin-top: -12px;
-        font-size: 2.125rem;
-        max-width: 24ch;
-    }
+.heroTextTitle {
+    margin-top: -12px;
+    font-size: 2.125rem;
+    max-width: 24ch;
+    text-transform: capitalize;
+}
 
-    p {
-        color: rgba(50, 50, 50, 0.745);
-    }
+.heroTextDesc {
+    color: rgba(50, 50, 50, 0.745);
+}
 
-    a {
-        max-width: fit-content;
-        text-decoration: none;
-        color: var(--fg);
-        font-family: "Poppins", sans-serif;
-        padding: 0.35rem 1.25rem;
-        border-radius: 10dvw;
-        /* background: plum; */
-        border: 1px solid var(--bg-faded);
-        position: relative;
-        background: var(--bg);
-        transition: all 0ms;
+.heroTextLink {
+    max-width: fit-content;
+    text-decoration: none;
+    color: var(--fg);
+    padding: 0.35rem 1.25rem;
+    border-radius: 10dvw;
+    /* background: plum; */
+    border: 1px solid var(--bg-faded);
+    position: relative;
+    background: var(--bg);
+    transition: all 0ms;
 
-        &:hover,
-        &:focus-visible {
-            padding-inline: 1.25rem !important;
-            border: 1px solid rgb(255, 255, 255);
-            background: var(--fg);
-            color: var(--bg);
 
-            &::before {
-                content: '';
-                position: absolute;
-                width: 0px;
-                height: 0px;
-            }
-        }
+    &:hover,
+    &:focus,
+    &:focus-visible,
+    &:focus-visible,
+    &:focus-within,
+    &:active {
+        padding-inline: 1.25rem !important;
+        border: 1px solid rgb(255, 255, 255);
+        background: var(--fg);
+        color: var(--bg);
 
-        &:hover,
-        &:focus,
-        &:focus-visible,
-        &:active {
-            background: var(--bg-grd);
-            animation: rotateBg 5s linear infinite alternate-reverse;
-            background-size: 800%;
-        }
+        background: var(--bg-grd);
+        animation: rotateBg 5s linear infinite alternate-reverse;
+        background-size: 800%;
     }
 }
 
-
-
-
-
-@keyframes rotateShapeRev {
-    to {
-        transform: rotate(0deg);
-    }
-
-    from {
-        transform: rotate(360deg);
-    }
-}
-
-.hDiv2 {
-    padding: 1rem 1.618rem;
-    display: flex;
-    justify-content: space-between;
-    align-items: start;
-    padding-block: 2rem;
-    width: 100%;
+/* hero form and reviews */
+.form_and_reviews {
+    padding: 1rem 2rem;
+    min-width: 100%;
     background-size: cover !important;
     background-repeat: no-repeat !important;
     background-position: center center !important;
     border-radius: 20px;
     position: relative;
+
+    display: flex;
+    justify-content: space-between;
     gap: 1rem;
 
-    .glassLayer {
-        position: absolute;
-        inset: 0;
-        width: 50%;
-        z-index: 0;
-        background: rgba(0, 0, 0, 0.2);
-        backdrop-filter: blur(35px);
-        -webkit-backdrop-filter: blur(35px);
-        background-repeat: repeat-x 10px;
-        overflow: hidden;
-        border-top-left-radius: 20px;
-        border-bottom-left-radius: 20px;
-        background-size: 10px 100%;
-        background-repeat: repeat;
-    }
+    align-items: start;
 
-    .reviewsDiv {
-        position: relative;
-        z-index: 1;
-        opacity: 1;
-        align-self: flex-end;
-
-
-        ul {
-            list-style: none;
-            font-size: 12px;
-            display: flex;
-            flex-direction: column;
-            gap: 1rem;
-
-            li {
-                background: transparent;
-                backdrop-filter: blur(50px);
-                -webkit-backdrop-filter: blur(50px);
-                background-repeat: 10px;
-                color: white;
-                padding: 0.5rem;
-                border-radius: 12px !important;
-                display: flex;
-                flex-direction: column;
-                gap: 0.35rem;
-                border: 1px solid rgba(255, 255, 255, 0.156);
-
-                .reviewTop,
-                .reviewMid,
-                .reviewBottom {
-                    display: flex;
-                    justify-content: space-between;
-                    align-items: center;
-                    gap: 1rem
-                }
-
-                .reviewTop {
-                    opacity: 1;
-
-                    a {
-                        text-decoration: none;
-                        text-transform: capitalize;
-                        color: white;
-                    }
-
-                    * {
-                        font-family: monospace
-                    }
-                }
-
-                .reviewMid {
-                    opacity: 1;
-                    gap: 0.5rem;
-
-                    img {
-                        width: 30px;
-                        aspect-ratio: 1/1;
-                        object-fit: cover;
-                        border-radius: 50%;
-                    }
-
-                    span {
-                        max-width: 30ch;
-                    }
-
-                }
-
-                .reviewBottom {
-                    opacity: 1;
-
-                    a {
-                        text-decoration: none;
-                        text-transform: capitalize;
-                        font-size: 10px;
-                        padding: 0.125rem 0.5rem;
-                        background: rgba(14, 14, 14, 0.15);
-                        border: none;
-                        color: rgb(255, 255, 255);
-                        border-radius: 10px;
-                        font-weight: bold;
-                        transition: all 150ms;
-
-                        &:hover {
-                            background: linear-gradient(130deg, rgba(0, 0, 0, 0.7), rgba(225, 225, 225, 0.5));
-                            background-size: 800%;
-                        }
-                    }
-                }
-            }
-        }
-    }
-
-    .formDiv {
-
-        background: rgba(255, 255, 255, 0.9);
-        backdrop-filter: blur(50px);
-        -webkit-backdrop-filter: blur(50px);
-        padding: 0.75rem;
-        border-radius: 16px;
-        max-width: 300px;
-
-        form {
-            .formLogo {
-                margin-bottom: 0.125rem;
-                font-weight: bold;
-                font-size: 1.25rem;
-                background: var(--bg-grd);
-                -webkit-background-clip: text;
-                background-clip: text;
-                -webkit-text-fill-color: black;
-            }
-
-            .formBanner {
-                background-size: cover !important;
-                background-repeat: no-repeat !important;
-                background-position: center center !important;
-                width: 100%;
-
-                height: 120px;
-                filter: brightness(0.8);
-                border-radius: 8px;
-                display: flex;
-                justify-content: center;
-                position: relative;
-                align-items: center;
-                /* filter: saturate(0); */
-                /* display: none; */
-
-                span {
-                    position: absolute;
-                    inset: 0;
-                    font-size: 1.25rem;
-
-                }
-            }
-
-            .formTopics {
-                margin-top: 0.5rem;
-                display: flex;
-                justify-content: center;
-                gap: 1rem;
-                align-items: center;
-                overflow-x: scroll;
-
-                ul {
-                    display: flex;
-                    gap: 0.5rem;
-                    list-style: none;
-                    flex-wrap: wrap;
-
-                    li {
-                        font-size: 9px;
-                        font-weight: bold;
-                        padding: 0.25rem 0.5rem;
-                        border-radius: 10dvw;
-                        color: black;
-                        background: rgba(255, 255, 255, 0);
-                        border: 1px dashed black;
-                        cursor: default;
-
-                        &:hover {
-                            background: black;
-                            color: white;
-                            border: 1px dashed black;
-                        }
-                    }
-                }
-            }
-
-            .mailWrapper,
-            .msgWrapper {
-                position: relative;
-
-                &:not(:focus-within) {
-                    &::before {
-                        position: absolute;
-                        content: '*';
-                        top: 3px;
-                        right: 5px;
-                        font-weight: bold;
-                        color: red;
-                    }
-                }
-            }
-
-            .messageBox,
-            .messageBox2,
-            .email {
-                border-radius: 8px !important;
-                width: 100%;
-                border: 1px solid gainsboro;
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                resize: none;
-                min-height: 80px;
-                font-size: 12px;
-                background: rgba(255, 255, 255, 0.3);
-                padding: 0.5rem;
-                width: 100% !important;
-                margin-top: 0.5rem;
-
-                &:focus-visible,
-                &:focus {
-                    outline: 1px solid black;
-                }
-            }
-
-            .messageBox2,
-            .email {
-                min-height: 20px !important;
-            }
-
-            .email {
-                min-height: 20px !important;
-            }
-
-
-            .submitButton {
-                font-size: 0.9rem;
-                margin-top: 0.5rem;
-                width: 100%;
-                font-weight: bolder;
-                padding: 0.5rem 0.5rem;
-                border-radius: 8px;
-                background: black;
-                color: white;
-                transition: all 250ms;
-                cursor: pointer;
-                border: none;
-
-                &:hover,
-                &:focus,
-                &:focus-visible,
-                &:active {
-                    background: var(--bg-grd);
-                    animation: rotateBg 5s linear infinite alternate-reverse;
-                    background-size: 800%;
-                }
-            }
-        }
-    }
 }
 
-.l2_hdiv1 {
-    span {
-        margin-top: -12px;
-        font-size: 1.325rem;
-        max-width: 24ch !important;
-        color: rgb(0, 0, 0, 0.7);
-        font-weight: 600;
-
-        strong {
-            font-family: system-ui;
-            color: rgb(0, 0, 0, 1);
-        }
-    }
-
-    ul {
-        list-style: none;
-        display: flex;
-        gap: 1.5rem;
-        margin-top: 1rem;
-        flex-wrap: wrap;
-
-        li {
-            a {
-                text-decoration: none;
-                color: unset;
-                border: 2px dashed;
-                padding: 0.25rem 1rem;
-                border-radius: 10dvw;
-
-            }
-        }
-    }
-}
-
-.l2_hdiv2 {
+/* hero cards */
+.heroCards {
     width: 100%;
     display: flex;
     justify-content: space-between !important;
     align-items: center;
     gap: 1rem;
-
-    .l2_hdiv2_images {
-
-        flex: 1 !important;
-        display: flex;
-        flex-direction: column;
-        justify-content: space-evenly;
-        align-items: start;
-        border-radius: 20px;
-        min-height: 150px !important;
-        padding: 1rem;
-        position: relative;
-
-        .bgLayer,
-        .bgLayer2 {
-            border-radius: 20px;
-            position: absolute;
-            inset: 0;
-            z-index: 0;
-            background-size: cover !important;
-        }
-
-        .bgLayer {
-            background-position: center left !important;
-        }
-
-        span {
-            font-size: 1.25rem;
-            z-index: 1;
-            border-radius: 8px;
-            padding: 0.25rem 0.5rem;
-
-            color: black;
-            background: rgba(255, 255, 255, 0.9);
-            backdrop-filter: blur(50px);
-            -webkit-backdrop-filter: blur(50px);
-            display: inline;
-        }
-
-        button {
-            z-index: 1;
-
-        }
-    }
 }
 
-.takeMeThere {
-    width: 20px;
-    height: 20px;
-    background: rgba(255, 255, 255, 0.7) !important;
+.heroCardWrapper {
+    flex: 1 !important;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: start;
+    border-radius: 20px;
+    min-height: 150px !important;
+    padding: 1rem;
+    position: relative;
+    gap: 1rem;
+}
+
+.bgLayer {
+    background-position: center left !important;
+    border-radius: 20px;
+    position: absolute;
+    inset: 0;
+    background-size: cover !important;
+}
+
+.heroCardText {
+    font-size: 1.25rem;
+    z-index: 1;
+    border-radius: 8px;
+    padding: 0.25rem 0.5rem;
+
+    color: black;
+    background: rgba(255, 255, 255, 0.9);
     backdrop-filter: blur(50px);
     -webkit-backdrop-filter: blur(50px);
-    position: relative;
-    border-radius: 50%;
-
-    &::after {
-        position: absolute;
-        content: '';
-        inset: 0;
-        width: 6px;
-        height: 6px;
-        top: 50%;
-        left: 50%;
-        border-right: 1px solid black;
-        border-top: 1px solid black;
-        transform: translate(-50%, -50%);
-        transition: all 250ms;
-    }
-
-    &:hover {
-        background: white !important;
-    }
-
-}
-
-@keyframes rotateBg {
-    0% {
-        background-position: 0% 50%;
-    }
-
-    100% {
-        background-position: 100% 50%;
-    }
-}
-
-.active {
-    background: black !important;
-    color: white !important;
-}
-
-
-
-
-
-.circleBar {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 100px;
-    height: 100px;
-    border: 2px solid transparent;
-    background: var(--bg-grd);
-    padding: 2rem;
-    border-radius: 50%;
-    box-sizing: border-box;
-    /* Added to ensure padding is included in width and height */
-
-    &::before {
-        content: '';
-        position: absolute;
-        inset: 0;
-        border-radius: 50%;
-        background: rgba(255, 255, 255, 0.9);
-        backdrop-filter: blur(50px);
-        -webkit-backdrop-filter: blur(50px);
-    }
-
-    .Arrow {
-        position: absolute;
-        width: 40px;
-        height: 40px;
-        font-size: 2rem;
-        background: url('../../assets/images/down.png') no-repeat center center;
-        background-size: contain;
-    }
+    display: inline;
 }

@@ -1,231 +1,102 @@
+@import url(../../globals.css);
+
 @media (max-width:716px) {
-    @keyframes rotateBg {
-        0% {
-            background-position: 0% 50%;
-        }
 
-        100% {
-            background-position: 100% 50%;
-        }
-    }
-
+    /* header component  */
     .headerDiv {
         padding: 1rem 2rem !important;
     }
 
-    /* nav {
-        ul {
-            flex-wrap: wrap !important;
-        }
-    } */
-
-    span.logo {
-        a {
-            font-family: logofont;
-            font-size: 2rem;
-            text-decoration: none;
-            border-radius: 10dvw;
-            -webkit-background-clip: text !important;
-            background-clip: text !important;
-            -webkit-text-fill-color: transparent !important;
-            background: black;
-            background: var(--bg-grd2) !important;
-            animation: rotateBg 5s linear infinite alternate-reverse !important;
-        }
+    /* second child => portfolio button */
+    .navBarUlItem:nth-child(2) {
+        display: none !important;
     }
 
+    /* loginButton */
+    .loginBtn {
+        display: none !important;
+    }
+
+    /* nav elements font size */
+    .navBarUlItemLink,
+    .navBarUlItemLink_C {
+        font-size: 0.75rem !important;
+    }
 }
 
-header.headerDiv {
+
+.headerDiv {
     margin-top: 0.5rem;
     padding: 1rem 3.236rem;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background: transparent;
-    /* border-bottom: 1px solid whitesmoke; */
-    /* box-shadow: 0 0 100px whitesmoke; */
-    /* border-bottom-left-radius: 20px;
-    border-bottom-right-radius: 20px;
-    position: sticky;
-    width: 100%;
-    z-index: 10;
-    top: 0; */
-    flex-wrap: wrap;
-    gap: 1rem;
 
+    * {
 
-}
-
-span.logo {
-    a {
-        font-family: logofont;
-        font-size: 2rem;
-        text-decoration: none;
-        border-radius: 10dvw;
-        -webkit-background-clip: text !important;
-        background-clip: text !important;
-        -webkit-text-fill-color: transparent !important;
-        background: black;
-        /* background: var(--bg-grd);
-        animation: rotateBg 5s linear infinite alternate-reverse;
-        background-size: 400%; */
-    }
-}
-
-nav.navBar {
-    opacity: 1;
-    display: flex;
-    align-items: center;
-}
-
-.navBarUl {
-    list-style: none;
-    display: flex;
-    gap: 1rem;
-}
-
-.navBarUlItem {
-    opacity: 1;
-
-}
-
-.navBarUlItemLink {
-    text-decoration: none;
-    color: inherit;
-    font-family: "Poppins", sans-serif;
-    padding: 0.35rem 1.25rem;
-    border-radius: 10dvw;
-    /* background: plum; */
-    border: 1px solid var(--bg-faded);
-    position: relative;
-    background: var(--bg);
-    color: var(--fg);
-    transition: all 0ms;
-
-    &:hover,
-    &:focus-visible {
-        /* padding-inline: 1.5rem 1rem !important; */
-        transition: all 0ms;
-        background: var(--fg);
-        color: var(--bg);
-        border: 1px solid rgb(255, 255, 255);
-        background: var(--bg-grd);
-
-        &:hover {
-            animation: rotateBg 2s linear infinite alternate;
-            animation: rotateBg 2s linear infinite alternate-reverse;
-            background-size: 800%;
-        }
-
-        /* &::before {
-            content: '';
-            position: absolute;
-            left: 0.75rem;
-            top: 50%;
-            transform: translateY(-50%);
-            width: 3px;
-            height: 3px;
-            border-radius: 50%;
-            background: var(--bg);
-        } */
-    }
-}
-
-div.loginBtn {
-    text-decoration: none;
-    color: inherit;
-    font-family: "Poppins", sans-serif;
-    padding: 0.35rem 1.25rem;
-    border-radius: 10dvw;
-    /* background: plum; */
-    border: 1px solid var(--bg-faded);
-    position: relative;
-    background: var(--bg);
-    color: var(--fg);
-    transition: all 0ms;
-    /* 
-    &:hover,
-    &:focus-visible {
-        transition: all 0ms;
-        background: var(--fg);
-        color: var(--bg);
-        border: 1px solid rgb(35, 35, 35);
-    } */
-}
-
-.navBarUlItemLink_C,
-.loginBtn {
-    display: inline-flex;
-    align-items: center;
-}
-
-.navBarUlItemLink_C {
-    text-decoration: none;
-    color: var(--fg);
-    font-family: "Poppins", sans-serif;
-    padding: 0.35rem 1.25rem;
-    border-radius: 10dvw;
-    /* background: plum; */
-    border: 1px solid var(--bg-faded);
-    position: relative;
-    background: var(--bg);
-    transition: all 0ms;
-
-    &:hover,
-    &:focus-visible {
-        padding-inline: 1.25rem !important;
-        border: 1px solid rgb(255, 255, 255);
-        background: var(--fg);
-        color: var(--bg);
-
-        &::before {
-            content: '';
-            position: absolute;
-            width: 0px;
-            height: 0px;
+        &:hover,
+        &:focus,
+        &:focus-visible,
+        &:focus-visible,
+        &:focus-within,
+        &:active {
+            outline: none;
         }
     }
 }
 
+.logo {
+    position: relative;
+    border-radius: 10dvw;
+    font-family: logofont;
+    font-size: 2rem;
+    text-transform: capitalize;
+}
+
+.navBarUlItem,
 .loginBtn {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    gap: 0.5rem;
+    font-weight: 500;
+    padding: 0.35rem 1.25rem;
+    border-radius: 10dvw;
+    border: 1px solid var(--bg-faded);
+    position: relative;
+    color: var(--fg);
+    cursor: pointer;
+
+    text-transform: capitalize !important;
+
+    &:hover,
+    &:focus,
+    &:focus-visible,
+    &:focus-visible,
+    &:focus-within,
+    &:active {
+        color: var(--bg);
+        background: var(--fg);
+        border: 1px solid var(--bg);
+    }
+}
+
+.loginBtn {
+    gap: 0.5rem !important;
     padding-inline: 0.5rem 0.75rem !important;
-    position: relative;
-
-    &:hover {
-        cursor: pointer;
-    }
 }
+
 
 .loginBtnSpan {
     width: 20px;
     height: 20px;
     border-radius: 50%;
+
     display: flex;
-    text-align: center;
     align-items: center;
     justify-content: center;
-    border: 1px solid var(--bg);
+
     color: var(--bg);
-    background: var(--bg-grd);
+    background: var(--bg-grd2);
     transition: all 0ms;
 }
 
-.loginBtn:hover .loginBtnSpan {
-    animation: rotateBg 2s linear infinite alternate;
-    background-size: 800%;
-}
-
-@keyframes rotateBg {
-    0% {
-        background-position: 0% 50%;
-    }
-
-    100% {
-        background-position: 100% 50%;
+.loginBtn:hover {
+    .loginBtnSpan {
+        animation: rotateBg 2s linear infinite alternate;
+        background-size: 800%;
     }
 }
