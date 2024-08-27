@@ -1,4 +1,5 @@
 import styles from './CourseListItem.module.css';
+import { useEffect, useState } from 'react';
 
 function CourseListItem ( { Title, Image, Stats, Price, Desc, downloadLink } ) {
   const [ paymentSuccess, setPaymentSuccess ] = useState( false );
