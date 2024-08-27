@@ -1,4 +1,3 @@
-import React from 'react';
 import { Route, Routes } from 'react-router-dom';
 import Hero from './Components/Hero/Hero'; // Adjust path as needed
 import Showcase from './Components/Showcase/Showcase'; // Adjust path as needed

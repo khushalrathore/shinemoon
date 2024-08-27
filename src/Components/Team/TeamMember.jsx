@@ -1,4 +1,4 @@
-import React from 'react'
+
 import styles from './TeamMember.module.css'
 
 function TeamMember ( { name, role, img, desc, id, direction, link } ) {

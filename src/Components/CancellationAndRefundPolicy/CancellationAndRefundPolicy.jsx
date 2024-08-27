@@ -1,4 +1,3 @@
-import React from 'react';
 import styles from './CancellationAndRefundPolicy.module.css'; // Import CSS module
 
 const CancellationAndRefundPolicy = () => {

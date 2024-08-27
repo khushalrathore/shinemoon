@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+
 import { shinemoon_stats, showcase_sideBar, shuffleArray } from './showcaseData';
 import styles from './Showcase.module.css';
 

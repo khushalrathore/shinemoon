@@ -1,4 +1,3 @@
-import React, { useState, useEffect } from 'react';
 import styles from './CourseListItem.module.css';
 
 function CourseListItem ( { Title, Image, Stats, Price, Desc, downloadLink } ) {

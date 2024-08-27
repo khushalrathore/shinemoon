@@ -1,4 +1,3 @@
-import React from 'react'
 import { heroTextContent } from './heroData.jsx';
 
 import styles from "./Hero.module.css"

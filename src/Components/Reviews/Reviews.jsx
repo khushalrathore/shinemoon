@@ -1,4 +1,4 @@
-import React from 'react'
+
 import { getSocialLink, reviewsList } from './reviewsData.jsx'
 
 import styles from './Reviews.module.css'

@@ -1,4 +1,3 @@
-import React from 'react'
 import { projectName, exploreTags } from './exploreData'
 
 import styles from "./Explore.module.css"

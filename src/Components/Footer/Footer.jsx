@@ -1,4 +1,3 @@
-import React, { useEffect } from 'react';
 import { footerItems } from './footerData';
 import styles from './Footer.module.css';
 

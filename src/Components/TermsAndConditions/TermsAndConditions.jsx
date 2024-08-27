@@ -1,4 +1,4 @@
-import React from 'react'
+
 import styles from './TermsAndConditions.module.css';
 function TermsAndConditions () {
   return (
