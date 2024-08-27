@@ -5,10 +5,9 @@ import styles from './Showcase.module.css';
 import a from '../../assets/videos/a.mp4';
 import b from '../../assets/videos/b.mp4';
 import c from '../../assets/videos/c.mp4';
-
+import creatorIcon from '../../assets/images/dummy.png'
 const Showcase = () => {
 
-    const creatorIcon = "https://art.ngfiles.com/images/2947000/2947278_mihar34_pfp.png?f1672060785";
     const [ currentVideoIndex, setCurrentVideoIndex ] = useState( 2 );
     const [ transitioning, setTransitioning ] = useState( false );
     const [ currentShowcaseIndex, setCurrentShowcaseIndex ] = useState( 0 );
